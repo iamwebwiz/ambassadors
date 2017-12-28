@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
+    createRoles();
     return view('welcome');
 });
 
