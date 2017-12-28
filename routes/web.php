@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    createRoles();
-    return view('welcome');
-});
+Route::get('/', 'FrontendController@welcome');
 
 Auth::routes();
 
