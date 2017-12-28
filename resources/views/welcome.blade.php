@@ -1,723 +1,906 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Digital Ambassadors</title>
-    <meta content="width=devie-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
-    <meta property="og:title" content="Digital Ambassadors">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="http://dgambassadors.com">
-    <meta property="og:site_name" content="Digital Ambassadors">
-    <meta property="og:description" content="Soft Work Is Our Work">
-
-    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="http://dgambassadors.com">
-    <meta name="twitter:title" content="Digital Ambassadors">
-    <meta name="twitter:description" content="Soft Work Is Our Work">
-    <meta name="twitter:image" content="">
-
-    <!-- Favicon -->
-    <link href="assets/img/favicon.ico" rel="icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
-
-    <!-- Bootstrap CSS File -->
-    <link href="{{ asset('assets/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Libraries CSS Files -->
-    <link href="{{ asset('assets/lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-
-    <!-- Main Stylesheet File -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
-    <!-- =======================================================
-      Theme Name: Bell
-      Theme URL: https://bootstrapmade.com/bell-free-bootstrap-4-template/
-      Author: BootstrapMade.com
-      Author URL: https://bootstrapmade.com
-    ======================================================= -->
-  </head>
-
-  <body>
-    <!-- Page Content
-    ================================================== -->
-    <!-- Hero -->
-
-    <section class="hero">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-md-12">
-            <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="assets/img/logo.png"></a>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <h1>
-            A theme with personality
-          </h1>
-
-          <p class="tagline">
-            This is a powerful theme with some great features that you can use in your future projects.
-          </p>
-          <a class="btn btn-full" href="#about">Get Started Now</a>
-        </div>
-      </div>
-
-    </section>
-    <!-- /Hero -->
-
-  <!-- Header -->
-  <header id="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <a href="index.html"><img src="img/logo-nav.png" alt="" title="" /></img></a>
-        <!-- Uncomment below if you prefer to use a text image -->
-        <!--<h1><a href="#hero">Bell</a></h1>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-
-      <nav class="nav social-nav pull-right hidden-sm-down">
-        <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
-      </nav>
-    </div>
-  </header><!-- #header -->
-
-    <!-- About -->
-
-    <section class="about" id="about">
-      <div class="container text-center">
-        <h2>
-          About Bell Theme
-        </h2>
-
-        <p>
-          Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri temporibus an duo.
-        </p>
-
-        <div class="row stats-row">
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">232</span> Satisfied Customers
-            </div>
-          </div>
-
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">79</span> Released Projects
-            </div>
-          </div>
-
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">1,463</span> Hours Of Support
-            </div>
-          </div>
-
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">15</span> Hard Workers
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /About -->
-    <!-- Parallax -->
-
-    <div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="assets/img/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
-      <h2>
-        Welcome to a perfect theme
-      </h2>
-
-      <p>
-        This is the most powerful theme with thousands of options that you have never seen before.
-      </p>
-      <img alt="Bell - A perfect theme" class="gadgets-img hidden-md-down" src="assets/img/gadgets.png">
-    </div>
-    <!-- /Parallax -->
-    <!-- Features -->
-
-    <section class="features" id="features">
-      <div class="container">
-        <h2 class="text-center">
-          Features
-        </h2>
-
-        <div class="row">
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <span class="fa fa-rocket"></span>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Custom Design
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <span class="fa fa-envelope"></span>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Responsive Layout
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <span class="fa fa-bell"></span>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Innovative Ideas
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <span class="fa fa-database"></span>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Good Documentation
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <span class="fa fa-cutlery"></span>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Excellent Features
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="feature-icon">
-                  <span class="fa fa-dashboard"></span>
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Retina Ready
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Features -->
-    <!-- Call to Action -->
-
-    <section class="cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 col-sm-12 text-lg-left text-center">
-            <h2>
-              Call to Action Section
-            </h2>
-
-            <p>
-              Lorem ipsum dolor sit amet, nec ad nisl mandamus imperdiet, ut corpora cotidieque cum. Et brute iracundia his, est eu idque dictas gubergren
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-sm-12 text-lg-right text-center">
-            <a class="btn btn-ghost" href="#">Buy This Theme</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Call to Action -->
-    <!-- Portfolio -->
-
-    <section class="portfolio" id="portfolio">
-      <div class="container text-center">
-        <h2>
-          Portfolio
-        </h2>
-
-        <p>
-          Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, Per nihil dicant commodo an.
-        </p>
-      </div>
-
-      <div class="portfolio-grid">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-1.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-2.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-3.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-4.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-5.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-6.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-7.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-sm-6 col-xs-12">
-            <div class="card card-block">
-              <a href="#"><img alt="" src="assets/img/porf-8.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Portfolio -->
-    <!-- Team -->
-
-    <section class="team" id="team">
-      <div class="container">
-        <h2 class="text-center">
-          Meet our team
-        </h2>
-
-        <div class="row">
-          <div class="col-sm-3 col-xs-6">
-            <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-1.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-              </div>
-
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
-                </nav>
-
-                <p>
-                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                </p>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-sm-3 col-xs-6">
-            <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-2.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-              </div>
-
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
-                </nav>
-
-                <p>
-                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                </p>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-sm-3 col-xs-6">
-            <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-3.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-              </div>
-
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
-                </nav>
-
-                <p>
-                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                </p>
-              </div></a>
-            </div>
-          </div>
-
-          <div class="col-sm-3 col-xs-6">
-            <div class="card card-block">
-              <a href="#"><img alt="" class="team-img" src="assets/img/team-4.jpg">
-              <div class="card-title-wrap">
-                <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-              </div>
-
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Connect with me
-                </h4>
-
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
-                </nav>
-
-                <p>
-                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                </p>
-              </div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Team -->
-    <!-- component: footer -->
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2 class="section-title">Contact Us</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-3 offset-lg-2">
-            <div class="info">
-              <div>
-                <i class="fa fa-map-marker"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
-              </div>
-
-              <div>
-                <i class="fa fa-envelope"></i>
-                <p>info@example.com</p>
-              </div>
-
-              <div>
-                <i class="fa fa-phone"></i>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-5">
-            <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                  <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validation"></div>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validation"></div>
-                  </div>
-                  <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="bottom">
+        <title>Timber</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'>
+
+        <link rel="stylesheet" type="text/css" href="css/slicknav.css">
+        <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/camera.min.js"></script>
+        <script type="text/javascript" src="js/myscript.js"></script>
+        <script src="js/sorting.js" type="text/javascript"></script>
+        <script src="js/jquery.isotope.js" type="text/javascript"></script>
+        <!--script type="text/javascript" src="js/jquery.nav.js"></script-->
+
+
+        <script>
+            jQuery(function(){
+                    jQuery('#camera_wrap_1').camera({
+                    transPeriod: 500,
+                    time: 3000,
+                    height: '490px',
+                    thumbnails: false,
+                    pagination: true,
+                    playPause: false,
+                    loader: false,
+                    navigation: false,
+                    hover: false
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+
+    <!--home start-->
+
+    <div id="home">
+        <div class="headerLine">
+    <div id="menuF" class="default">
         <div class="container">
-          <div class="row">
-
-            <div class="col-lg-6 col-xs-12 text-lg-left text-center">
-              <p class="copyright-text">
-                © BELL Theme
-              </p>
-              <div class="credits">
-                  <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
-                -->
-                <a href="https://bootstrapmade.com/">Bootstrap Themes</a> by BootstrapMade
-              </div>
+            <div class="row">
+                <div class="logo col-md-4">
+                    <div>
+                        <a href="#">
+                            <img src="images/logo.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="navmenu"style="text-align: center;">
+                        <ul id="menu">
+                            <li class="active" ><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#project">Projects</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li class="last"><a href="#contact">Contact</a></li>
+                            <!--li><a href="#features">Features</a></li-->
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-lg-6 col-xs-12 text-lg-right text-center">
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a href="index.html">Home</a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a href="#about">About Us</a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a href="#features">Features</a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a href="#portfolio">Portfolio</a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a href="#team">Team</a>
-                </li>
-
-                <li class="list-inline-item">
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
         </div>
-      </div>
-    </footer>
-    <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+    </div>
+        <div class="container">
+            <div class="row wrap">
+                <div class="col-md-12 gallery">
+                        <div class="camera_wrap camera_white_skin" id="camera_wrap_1">
+                            <div data-thumb="" data-src="images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h2>We listen.</h2>
+                                </div>
+                            </div>
+                            <div data-thumb="" data-src="images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h2>We discuss.</h2>
+                                </div>
+                            </div>
+                            <div data-thumb="" data-src="images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h2>We develop.</h2>
+                                </div>
+                            </div>
+                        </div><!-- #camera_wrap_1 -->
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 project">
+                    <h3 id="counter">0</h3>
+                    <h4>Awesome Projects</h4>
+                    <p>Dolor sit amet, consectetur adipiscing elit quisque tempus eget diam et lorem a laoreet phasellus ut nisi id leo molestie. </p>
+                </div>
+                <div class="col-md-4 project">
+                    <h3 id="counter1">0</h3>
+                    <h4>Happy Customers</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus eget diam et. laoreet phasellus ut nisi id leo.  </p>
+                </div>
+                <div class="col-md-4 project">
+                    <h3 id="counter2" style="margin-left: 20px;">0</h3>
+                    <h4 style="margin-left: 20px;">Professional Awards</h4>
+                    <p>Consectetur adipiscing elit quisque tempus eget diam et laoreet phasellus ut nisi id leo molestie adipiscing vitae a vel. </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 cBusiness">
+                    <h3>The Best Way to Create Business Site &ndash; Attractive One Page</h3>
+                    <h4>Discover elegant solution for your online business fast, reliable, affordable.</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 centPic">
+                    <img class="img-responsive"  src="images/bizPic.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--about start-->
+
+    <div id="about">
+        <div class="line2">
+            <div class="container">
+                <div class="row Fresh">
+                    <div class="col-md-4 Des">
+                        <i class="fa fa-heart"></i>
+                        <h4>Fresh & Clean Design</h4>
+                        <p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor. feugiat </p>
+                    </div>
+                    <div class="col-md-4 Ver">
+                        <i class="fa fa-cog"></i>
+                        <h4>Very Flexible</h4>
+                        <p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor. feugiat </p>
+                    </div>
+                    <div class="col-md-4 Fully">
+                        <i class="fa fa-tablet"></i>
+                        <h4>Fully Responsive</h4>
+                        <p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor. feugiat </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wwa">
+                    <span name="about" ></span>
+                    <h3>Who We Are? Meet Our Team!</h3>
+                    <h4>We listen, we discuss, we advise and develop. We love to learn and use the latest technologies.</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row team">
+                <div class="col-md-4 b1">
+                        <img class="img-responsive" src="images/picTeam/picT1.png">
+                        <h4>Tom Simpson</h4>
+                        <h5>CEO</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                        </ul>
+                </div>
 
 
-    <!-- Required JavaScript Libraries -->
-    <script src="{{ asset('assets/lib/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/superfish/hoverIntent.js') }}"></script>
-    <script src="{{ asset('assets/lib/superfish/superfish.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/tether/js/tether.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/stellar/stellar.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('assets/lib/easing/easing.js') }}"></script>
-    <script src="{{ asset('assets/lib/stickyjs/sticky.js') }}"></script>
-    <script src="{{ asset('assets/lib/parallax/parallax.js') }}"></script>
-    <script src="{{ asset('assets/lib/lockfixed/lockfixed.min.js') }}"></script>
+                <div class="col-md-4">
+                        <img class="img-responsive" src="images/picTeam/picT2.png">
+                        <h4>John Doe</h4>
+                        <h5>Project Manager</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                        </ul>
+                </div>
 
-    <!-- Template Specisifc Custom Javascript File -->
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
 
-    <script src="{{ asset('assets/contactform/contactform.js') }}"></script>
+                <div class="col-md-4 b3">
+                        <img class="img-responsive" src="images/picTeam/picT3.png">
+                        <h4>Anna White</h4>
+                        <h5>Developer</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 hr1">
+                    <hr/>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 bar">
+                    <div class="progB chart" data-percent="64"  data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="64">
+                              <span class="percent">64</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>WordPress</h3>
+                        <p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 bar">
+                    <div class="progB chart" data-percent="22"  data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="22">
+                              <span class="percent">22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>HTML5</h3>
+                        <p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 bar ">
+                    <div class="progB chart" data-percent="84"  data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="22">
+                              <span class="percent">84</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>CSS3</h3>
+                        <p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 bar ">
+                    <div class="progB chart" data-percent="45"  data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="45">
+                              <span class="percent">45</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>Woocommerce</h3>
+                        <p>Nulla consectetur ornare nibh, a auctor <br/>mauris scelerisque eu proin nec urna quis. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  </body>
+
+        <div class="container">
+            <div class="row aboutUs">
+                <div class="col-md-12 ">
+                    <h3>What Our Customers Say About Us?</h3>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+
+            <div class="container">
+                <div class="row about">
+                    <div class="col-md-6">
+                        <div class="about1">
+                        <img class="pic1Ab" src="images/picAbout/aboutP1.png">
+                            <h3>Anna Smith, Company Inc.</h3>
+                            <p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis. aliquam, nulla nisi lobortis elit ac.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about2">
+                        <img class="pic2Ab" src="images/picAbout/aboutP2.png">
+                            <h3>John Doe, Company Inc.</h3>
+                            <p>Consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo, adipiscing auctor, ut auctor feugiat fermentum nec quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, ac luctus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="horL"></div>
+
+            <div class="container">
+                <div class="row about">
+                    <div class="col-md-6">
+                        <div class="about1">
+                        <img class="pic1Ab" src="images/picAbout/aboutP3.png">
+                            <h3>Tom Sawyer, Company Inc.</h3>
+                            <p>A auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, acnterdum ante feugiat vitae.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about2">
+                        <img class="pic2Ab" src="images/picAbout/aboutP4.png">
+                            <h3>Sarah White, Company Inc.</h3>
+                            <p>Ornare nibh a auctor, mauris scelerisque eu proin nec urna nec a quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra felis et venenatis aliquam, nulla nisi lobortis elit, ac eleifend nisl ante nec lorem. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--project start-->
+    <div id="project">
+        <div class="line3">
+            <div class="container">
+                <div id="project1" ></div>
+                <div class="row Ama">
+                    <div class="col-md-12">
+                    <span name="projects" id="projectss"></span>
+                    <h3>Our Amazing Works</h3>
+                    <p>Right here we've got something you gonna love</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+       <div class="container">
+
+        <div class="row">
+            <!-- filter_block -->
+                <div id="options" class="col-md-12" style="text-align: center;">
+                    <ul id="filter" class="option-set" data-option-key="filter">
+                        <li><a class="selected" href="#filter" data-option-value="*" class="current">All Works</a></li>
+                        <li><a href="#filter" data-option-value=".polygraphy">Polygraphy</a></li>
+                        <li><a href="#filter" data-option-value=".branding">Branding</a></li>
+                        <li><a href="#filter" data-option-value=".web">Web UI</a></li>
+                        <li><a href="#filter" data-option-value=".text_styles">Text Styles</a></li>
+                    </ul>
+                </div><!-- //filter_block -->
+
+
+
+            <div class="portfolio_block columns3   pretty" data-animated="fadeIn">
+                    <div class="element col-sm-4   gall branding">
+                        <a class="plS" href="images/prettyPhotoImages/pic1.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic1.jpg" alt="pic1 Gallery"/>
+                        </a>
+                        <div class="view project_descr ">
+                            <h3><a href="#">Recycled Paper - Business Card Mock Up</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>215</li>
+                                <li><a class="heart" href="#"><i class="fa-heart-o"></i>14</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="element col-sm-4  gall branding">
+                        <a class="plS" href="images/prettyPhotoImages/pic2.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic2.jpg" alt="pic2 Gallery"/>
+                        </a>
+                        <div class="view project_descr center">
+                            <h3><a href="#">Environment Logos Set</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>369</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>86</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="element col-sm-4  gall web">
+                        <a class="plS" href="images/prettyPhotoImages/pic3.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic3.jpg" alt="pic3 Gallery"/>
+                        </a>
+                        <div class="view project_descr ">
+                            <h3><a href="#">Beag Simple WEB UI</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>400</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>124</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="element col-sm-4  gall  text_styles">
+                        <a class="plS" href="images/prettyPhotoImages/pic4.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic4.jpg" alt="pic1 Gallery"/>
+                        </a>
+                        <div class="view project_descr ">
+                            <h3><a href="#">Pop Candy Text Effect</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>480</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>95</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="element col-sm-4  gall  web">
+                        <a class="plS" href="images/prettyPhotoImages/pic5.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic5.jpg" alt="pic1 Gallery"/>
+                        </a>
+                        <div class="view project_descr center">
+                            <h3><a href="#">User Interface Elements</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>215</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>14</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="element col-sm-4  gall  polygraphy">
+                        <a class="plS" href="images/prettyPhotoImages/pic6.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic6.jpg" alt="pic1 Gallery"/>
+                        </a>
+                        <div class="view project_descr ">
+                            <h3><a href="#">Stationery Branding Mock Up</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>375</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>102</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="element col-sm-4   gall branding">
+                        <a class="plS" href="images/prettyPhotoImages/pic7.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic7.jpg" alt="pic1 Gallery"/>
+                        </a>
+                        <div class="view project_descr ">
+                            <h3><a href="#">Darko - Business Card Mock Up</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>440</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>35</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="element col-sm-4  gall text_styles">
+                        <a class="plS" href="images/prettyPhotoImages/pic8.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic8.jpg" alt="pic1 Gallery"/>
+                        </a>
+                        <div class="view project_descr ">
+                            <h3><a href="#">Foil Mini Badges</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>512</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>36</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="element col-sm-4  gall polygraphy">
+                        <a class="plS" href="images/prettyPhotoImages/pic9.jpg" rel="prettyPhoto[gallery2]">
+                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/thumb_pic9.jpg" alt="pic1 Gallery"/>
+                        </a>
+                        <div class="view project_descr ">
+                            <h3><a href="#">Woody Poster Text Effect</a></h3>
+                            <ul>
+                                <li><i class="fa fa-eye"></i>693</li>
+                                <li><a  class="heart" href="#"><i class="fa-heart-o"></i>204</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+
+
+
+                    <div class="col-md-12 cBtn  lb" style="text-align: center;">
+                        <ul class="load_more_cont ">
+                            <li class="dowbload btn_load_more">
+                                <a href="javascript:void(0);" >
+                                    <i class="fa fa-arrow-down"></i>Load More Projects
+                                </a>
+                            </li>
+                            <li class="buy">
+                                <a href="#">
+                                    <i class="fa fa-shopping-cart"></i>Buy on Themeforest
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+        </div>
+
+            <script type="text/javascript">
+                jQuery(window).load(function(){
+                    items_set = [
+
+                        {category : 'branding', lika_count : '77', view_count : '234', src : 'images/prettyPhotoImages/pic9.jpg', title : 'Foil Mini Badges', content : '' },
+
+                        {category : 'polygraphy', lika_count : '45', view_count : '100', src : 'images/prettyPhotoImages/pic7.jpg', title : 'Darko – Business Card Mock Up', content : '' },
+
+                        {category : 'text_styles', lika_count : '22', view_count : '140', src : 'images/prettyPhotoImages/pic8.jpg', title : 'Woody Poster Text Effect', content : '' }
+
+
+                    ];
+                    jQuery('.portfolio_block').portfolio_addon({
+                        type : 1, // 2-4 columns simple portfolio
+                        load_count : 3,
+
+                        items : items_set
+                    });
+                    $('#container').isotope({
+                      animationOptions: {
+                         duration: 900,
+                         queue: false
+                       }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <!--news start-->
+
+    <div id="news">
+        <div class="line4">
+            <div class="container">
+                <div class="row Ama">
+                    <div class="col-md-12">
+                    <h3>What&rsquo;s New?</h3>
+                    <p>Get the latest news from our blog</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+                <div class="row news">
+                    <div class="col-md-6  text-left">
+                    <img class="img-responsive picsGall" src="images/picNews/news1.jpg"/>
+                    <h3><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                    <div class="col-md-6 text-right">
+                    <img class="img-responsive picsGall" src="images/picNews/news2.jpg"/>
+                    <h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row news2 news">
+                    <div class="col-md-6 text-left">
+                    <img class="img-responsive picsGall" src="images/picNews/news3.jpg"/>
+                    <h3><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                    <div class="col-md-6 text-right">
+                    <img class="img-responsive picsGall" src="images/picNews/news4.jpg"/>
+                    <h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row news2 news">
+                    <div class="col-md-6 text-left">
+                    <img class="img-responsive picsGall" src="images/picNews/news5.jpg"/>
+                    <h3 ><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                    <div class="col-md-6 text-right">
+                    <img class="img-responsive picsGall" src="images/picNews/news6.jpg"/>
+                    <h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container hideObj2" style="display:none;">
+                <div class="row news2 news">
+                    <div class="col-md-6 text-right">
+                    <img class="img-responsive picsGall" src="images/picNews/news6.jpg"/>
+                    <h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                    <div class="col-md-6 text-left">
+                    <img class="img-responsive picsGall" src="images/picNews/news5.jpg"/>
+                    <h3 ><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+                    <ul>
+                        <li><i class="fa fa-calendar"></i>April 25, 2014</li>
+                        <li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+                        <li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+                    <hr class="hrNews">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="row cBtn">
+                <div class="col-md-12" style="text-align: center; margin-bottom: -90px; z-index: 10;">
+                    <ul class="mNews">
+                        <li class="dowbload bhide2"><a href="#"><i class="fa fa-arrow-down"></i>Load More news</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--contact start-->
+
+    <div id="contact">
+        <div class="line5">
+            <div class="container">
+                <div class="row Ama">
+                    <div class="col-md-12">
+                    <h3>Got a Question? We&rsquo;re Here to Help!</h3>
+                    <p>Get in touch with us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-xs-12 forma">
+                    <form>
+                        <input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>
+                        <input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>
+                        <input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Subject'/>
+                        <textarea type="text" class="col-md-12 col-xs-12 Message" name='Message' placeholder='Message *'></textarea>
+                        <div class="cBtn col-xs-12">
+                            <ul>
+                                <li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>
+                                <li class="send"><a href="#"><i class="fa fa-share"></i>Send Message</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-xs-12 cont">
+                    <ul>
+                        <li><i class="fa fa-home"></i>5512 Lorem Ipsum Vestibulum 666/13</li>
+                        <li><i class="fa fa-phone"></i>+1 800 789 50 12, +1 800 450 6935</li>
+                        <li><a href="#"><i class="fa fa-envelope"></i>mail@compname.com</li></a>
+                        <li><i class="fa fa-skype"></i>compname</li>
+                        <li><a href="#"><i class="fa fa-twitter"></i>Twitter</li></a>
+                        <li><a href="#"><i class="fa fa-facebook-square"></i>Facebook</li></a>
+                        <li><a href="#"><i class="fa fa-dribbble"></i>Dribbble</li></a>
+                        <li><a href="#"><i class="fa fa-flickr"></i>Flickr</li></a>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i>YouTube</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="line6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d48386.401887313725!2d-73.9407136!3d40.7147117!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1402409149092" width="100%" height="750" frameborder="0" style="border:0"></iframe>
+        </div>
+        <div class="container">
+            <div class="row ftext">
+                <div class="col-md-12">
+                <a id="features"></a>
+                <h3>We Care About Our Clients and Can Make Their Life Easier!</h3>
+                <p>The main peculiarity of template is the striking presentation when visitors just need to use the scrolling option to find all necessary information about your web project. </p>
+                </div>
+                <div class="cBtn">
+                    <ul style="margin-top: 23px; margin-bottom: 0px; padding-left: 26px;">
+                        <li class="dowbload"><a href="#"><i class="fa fa-star"></i>View All Features</a></li>
+                        <li class="buy"><a href="#"><i class="fa fa-download"></i>Buy This Template</a></li>
+                    </ul>
+            </div>
+            </div>
+        </div>
+        <div class="line7">
+            <div class="container">
+                <div class="row footer">
+                    <div class="col-md-12">
+                        <h3>Subscribe for Our Newsletter!</h3>
+                        <p>Subscribe to our newsletter email to get notification about fresh news, latest promos, giveaways and free stuff from Skew. Stay always up-to-date!</p>
+                        <div class="fr">
+                        <div style="display: inline-block;">
+                            <input class="col-md-6 fEmail" name='Email' placeholder='Enter Your Email'/>
+                            <a href="#" class="subS">Subscribe!</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="soc col-md-12">
+                        <ul>
+                            <li class="soc1"><a href="#"></a></li>
+                            <li class="soc2"><a href="#"></a></li>
+                            <li class="soc3"><a href="#"></a></li>
+                            <li class="soc4"><a href="#"></a></li>
+                            <li class="soc5"><a href="#"></a></li>
+                            <li class="soc6"><a href="#"></a></li>
+                            <li class="soc7"><a href="#"></a></li>
+                            <li class="soc8"><a href="#"></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lineBlack">
+            <div class="container">
+                <div class="row downLine">
+                    <div class="col-md-12 text-right">
+                        <!--input  id="searchPattern" type="search" name="pattern" value="Search the Site" onblur="if(this.value=='') {this.value='Search the Site'; }" onfocus="if(this.value =='Search the Site' ) this.value='';this.style.fontStyle='normal';" style="font-style: normal;"/-->
+                        <input  id="searchPattern" type="search" placeholder="Search the Site"/><i class="glyphicon glyphicon-search" style="font-size: 13px; color:#a5a5a5;" id="iS"></i>
+                    </div>
+                    <div class="col-md-6 text-left copy">
+                        <p>Copyright &copy; 2014 Timber HTML Template. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-right dm">
+                        <ul id="downMenu">
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#project1">Projects</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li class="last"><a href="#contact">Contact</a></li>
+                            <!--li><a href="#features">Features</a></li-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script>
+            $(document).ready(function(){
+            $(".bhide").click(function(){
+                $(".hideObj").slideDown();
+                $(this).hide(); //.attr()
+                return false;
+            });
+            $(".bhide2").click(function(){
+                $(".container.hideObj2").slideDown();
+                $(this).hide(); // .attr()
+                return false;
+            });
+
+            $('.heart').mouseover(function(){
+                    $(this).find('i').removeClass('fa-heart-o').addClass('fa-heart');
+                }).mouseout(function(){
+                    $(this).find('i').removeClass('fa-heart').addClass('fa-heart-o');
+                });
+
+                function sdf_FTS(_number,_decimal,_separator)
+                {
+                var decimal=(typeof(_decimal)!='undefined')?_decimal:2;
+                var separator=(typeof(_separator)!='undefined')?_separator:'';
+                var r=parseFloat(_number)
+                var exp10=Math.pow(10,decimal);
+                r=Math.round(r*exp10)/exp10;
+                rr=Number(r).toFixed(decimal).toString().split('.');
+                b=rr[0].replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g,"\$1"+separator);
+                r=(rr[1]?b+'.'+rr[1]:b);
+
+                return r;
+}
+
+            setTimeout(function(){
+                    $('#counter').text('0');
+                    $('#counter1').text('0');
+                    $('#counter2').text('0');
+                    setInterval(function(){
+
+                        var curval=parseInt($('#counter').text());
+                        var curval1=parseInt($('#counter1').text().replace(' ',''));
+                        var curval2=parseInt($('#counter2').text());
+                        if(curval<=707){
+                            $('#counter').text(curval+1);
+                        }
+                        if(curval1<=12280){
+                            $('#counter1').text(sdf_FTS((curval1+20),0,' '));
+                        }
+                        if(curval2<=245){
+                            $('#counter2').text(curval2+1);
+                        }
+                    }, 2);
+
+                }, 500);
+            });
+    </script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('#menu').slicknav();
+
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+        var $menu = $("#menuF");
+
+        $(window).scroll(function(){
+            if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("default")
+                           .addClass("fixed transbg")
+                           .fadeIn('fast');
+                });
+            } else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+                $menu.fadeOut('fast',function(){
+                    $(this).removeClass("fixed transbg")
+                           .addClass("default")
+                           .fadeIn('fast');
+                });
+            }
+        });
+    });
+    //jQuery
+    </script>
+    <script>
+        /*menu*/
+        function calculateScroll() {
+            var contentTop      =   [];
+            var contentBottom   =   [];
+            var winTop      =   $(window).scrollTop();
+            var rangeTop    =   200;
+            var rangeBottom =   500;
+            $('.navmenu').find('a').each(function(){
+                contentTop.push( $( $(this).attr('href') ).offset().top );
+                contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+            })
+            $.each( contentTop, function(i){
+                if ( winTop > contentTop[i] - rangeTop && winTop < contentBottom[i] - rangeBottom ){
+                    $('.navmenu li')
+                    .removeClass('active')
+                    .eq(i).addClass('active');
+                }
+            })
+        };
+
+        $(document).ready(function(){
+            calculateScroll();
+            $(window).scroll(function(event) {
+                calculateScroll();
+            });
+            $('.navmenu ul li a').click(function() {
+                $('html, body').animate({scrollTop: $(this.hash).offset().top - 80}, 800);
+                return false;
+            });
+        });
+    </script>
+    <script type="text/javascript" charset="utf-8">
+
+        jQuery(document).ready(function(){
+            jQuery(".pretty a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: true, social_tools: ''});
+
+        });
+    </script>
+    </body>
+
 </html>
