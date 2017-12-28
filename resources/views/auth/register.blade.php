@@ -15,7 +15,6 @@
                             <label class="col-md-4 control-label">Account type</label>
                             <div class="col-md-6">
                                 <select name="account_type" class="form-control">
-                                    <option value="">Choose Account Type</option>
                                     <option value="client">Business Owner</option>
                                     <option value="publisher">Publisher</option>
                                 </select>
