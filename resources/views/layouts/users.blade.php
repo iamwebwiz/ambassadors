@@ -42,19 +42,26 @@
 
         <div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
-                    Creative Tim
+                <a href="#" class="simple-text">
+                    {{ auth()->user()->name }}
                 </a>
             </div>
 
             <ul class="nav">
-                <li class="active">
-                    <a href="dashboard.html">
+                <li class="active" id="dashboard">
+                    <a href="{{ url('home') }}">
                         <i class="ti-pie-chart"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-
+                @role('admin')
+                    <li id="shitty">
+                        <a href="">
+                            <i class="ti-pie-chart"></i>
+                            <p>Shitty</p>
+                        </a>
+                    </li>
+                @endrole
             </ul>
         </div>
     </div>
@@ -69,7 +76,7 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Template</a>
+                    <a class="navbar-brand" href="#">Digital Ambassadors</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -109,9 +116,7 @@
 
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
-
-                </div>
+                @yield('body')
             </div>
         </div>
 
