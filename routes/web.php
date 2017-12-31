@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', 'FrontendController@welcome');
+Route::get('/', 'FrontendController@welcome')->name('welcome');
 
 Auth::routes();
+
+Route::get('logout', 'HomeController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
