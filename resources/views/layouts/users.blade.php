@@ -29,6 +29,9 @@
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="css/themify-icons.css" rel="stylesheet">
 
+    <!-- JQuery -->
+    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+
 </head>
 <body>
 
@@ -48,11 +51,19 @@
             </div>
 
             <ul class="nav">
-                <li class="active" id="dashboard">
-                    <a href="{{ url('home') }}">
-                        <i class="ti-pie-chart"></i>
-                        <p>Dashboard</p>
-                    </a>
+                <li id="dashboard">
+                    @role('client')
+                        <a href="{{ url('client') }}">
+                            <i class="ti-pie-chart"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    @endrole
+                    @role('publisher')
+                        <a href="{{ url('publisher') }}">
+                            <i class="ti-pie-chart"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    @endrole
                 </li>
                 @role('admin')
                     <li id="shitty">
@@ -103,8 +114,8 @@
                         </li>
                         <li>
                             <a href="#">
-                                <i class="ti-settings"></i>
-                                <p>Settings</p>
+                                <i class="fa fa-sign-out"></i>
+                                <p>Logout</p>
                             </a>
                         </li>
                     </ul>
@@ -136,7 +147,6 @@
 </body>
 
     <!--   Core JS Files   -->
-    <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
     <!--  Checkbox, Radio & Switch Plugins -->

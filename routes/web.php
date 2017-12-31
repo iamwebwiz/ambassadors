@@ -16,3 +16,7 @@ Route::get('/', 'FrontendController@welcome');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'client', 'middleware' => ['auth', 'role:client']], function() {
+    Route::get('/', 'HomeController@index')->name('client.dash');
+});
