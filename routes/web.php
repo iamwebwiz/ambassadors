@@ -17,6 +17,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'client', 'middleware' => ['auth', 'role:client']], function() {
+Route::group(['prefix' => 'client', 'middleware' => ['auth', 'role:client'],
+    'namespace' => 'Client'], function() {
     Route::get('/', 'HomeController@index')->name('client.dash');
+});
+
+Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'],
+    'namespace' => 'Publisher'], function() {
+    Route::get('/', 'HomeController@index')->name('publisher.dash');
+});
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
+    'namespace' => 'Admin'], function() {
+    Route::get('/', 'HomeController@index');
 });
