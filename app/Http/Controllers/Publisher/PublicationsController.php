@@ -17,7 +17,8 @@ class PublicationsController extends Controller
         // Fetch all publications from database
 
         // Pass data to view
-        return view('publisher/publications/index');
+        $data['title'] = "My Publications";
+        return view('publisher/publications/index', $data);
     }
 
     public function showNewPublicationForm() {
