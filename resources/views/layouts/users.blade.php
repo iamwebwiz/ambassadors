@@ -65,14 +65,6 @@
                         </a>
                     @endrole
                 </li>
-                @role('admin')
-                    <li id="shitty">
-                        <a href="">
-                            <i class="ti-pie-chart"></i>
-                            <p>Shitty</p>
-                        </a>
-                    </li>
-                @endrole
             </ul>
         </div>
     </div>
