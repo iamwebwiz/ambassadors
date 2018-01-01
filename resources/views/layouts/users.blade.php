@@ -65,6 +65,14 @@
                         </a>
                     @endrole
                 </li>
+                @role('publisher')
+                    <li id="publications">
+                        <a href="{{ url('publications') }}">
+                            <i class="ti-layout-grid2"></i>
+                            <p>My Publications</p>
+                        </a>
+                    </li>
+                @endrole
             </ul>
         </div>
     </div>
