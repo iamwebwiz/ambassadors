@@ -15,6 +15,7 @@ class PublicationsController extends Controller
 
     public function index() {
         // Fetch all publications from database
+        $data['publications'] = Publication::paginate(30);
 
         // Pass data to view
         $data['title'] = "My Publications";

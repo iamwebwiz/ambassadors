@@ -17,16 +17,21 @@
                                 <th>Date Added</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Advert for CowryWise</td>
-                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                                    <td>CowryWise</td>
-                                    <td>January 1st, 2018</td>
-                                </tr>
+                                @forelse ($publications as $publication)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $publication->title }}</td>
+                                        <td>{{ $publication->description }}</td>
+                                        <td>{{ $publication->company_id }}</td>
+                                        <td>{{ $publication->created_at->format('d/m/Y') }}</td>
+                                    </tr>
+                                @empty
+                                    YOU ARE YET TO PUBLISH ANYTHING
+                                @endforelse
                             </tbody>
                         </table>
                     </div>
+                    {{ $publications->links() }}
                 </div>
             </div>
         </div>
