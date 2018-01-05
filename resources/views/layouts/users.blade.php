@@ -66,11 +66,25 @@
                         </a>
                     @endrole
                 </li>
+                @role('client')
+                    <li id="new-publication-request">
+                        <a href="{{ url('client/publications/new') }}">
+                            <i class="fa fa-plus"></i>
+                            <p>Request Publication</p>
+                        </a>
+                    </li>
+                @endrole
                 @role('publisher')
                     <li id="publications">
                         <a href="{{ url('publisher/publications') }}">
                             <i class="ti-layout-grid2"></i>
                             <p>My Publications</p>
+                        </a>
+                    </li>
+                    <li id="new-publication">
+                        <a href="{{ url('publisher/publications/new') }}">
+                            <i class="fa fa-plus"></i>
+                            <p>New Publication</p>
                         </a>
                     </li>
                 @endrole

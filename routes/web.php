@@ -23,6 +23,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'client', 'middleware' => ['auth', 'role:client'],
     'namespace' => 'Client'], function() {
     Route::get('/', 'HomeController@index')->name('client.dash');
+
+    // Publications
+    Route::group(['prefix' => 'publications'], function() {
+        Route::get('new', 'PublicationsController@showRequestPublicationForm');
+        Route::post('new', 'PublicationsController@requestNewPublication')->name('requestNewPublication');
+    });
 });
 
 // Routes for Publisher
