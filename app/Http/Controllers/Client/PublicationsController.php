@@ -8,20 +8,24 @@ use Illuminate\Http\Request;
 
 class PublicationsController extends Controller
 {
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
         $this->middleware('role:client');
     }
 
-    public function index() {
+    public function index()
+    {
         //
     }
 
-    public function showRequestPublicationForm() {
+    public function showRequestPublicationForm()
+    {
         return view('client/publications/new');
     }
 
-    public function requestNewPublication(NewPublication $request) {
+    public function requestNewPublication(NewPublication $request)
+    {
         //
     }
 }

@@ -33,4 +33,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Company::class);
     }
+
+    public function publications()
+    {
+        return $this->hasMany(Publication::class);
+    }
 }
