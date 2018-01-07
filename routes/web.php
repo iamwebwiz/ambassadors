@@ -32,7 +32,7 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth', 'role:client'],
 
     // Companies
     Route::group(['prefix' => 'companies'], function() {
-        Route::get('/', 'CompaniesController@index');
+        Route::get('/', 'CompaniesController@index')->name('client.companies');
         Route::get('new', 'CompaniesController@newCompany')->name('newCompany');
         Route::post('new', 'CompaniesController@addNewCompany')->name('addNewCompany');
     });

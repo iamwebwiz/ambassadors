@@ -15,22 +15,24 @@
                         </div>
                     </div>
                     <br><br>
-                    @if ($companies->count() > 0)
+                    @if ($user->companies->count() > 0)
                         <div class="table-responsive">
                             <table class="table table-hover table-striped">
                                 <thead>
                                     <th>#</th>
                                     <th>Company Name</th>
                                     <th>Address</th>
+                                    <th>Owner</th>
                                     <th>Date Added</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($companies as $company)
+                                    @foreach ($user->companies as $company)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $company->name }}</td>
                                             <td>{{ $company->address }}</td>
-                                            <td>{{ $company->created_at->diffForHumans() }}</td>
+                                            <td>{{ $company->user->name }}</td>
+                                            <td>{{ $company->created_at->format('jS F Y') }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
