@@ -37,7 +37,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-background-color="white" data-active-color="danger">
+    <div class="sidebar" data-background-color="black" data-active-color="info">
 
     <!--
         Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
@@ -67,10 +67,10 @@
                     @endrole
                 </li>
                 @role('client')
-                    <li id="new-publication-request">
-                        <a href="{{ url('client/publications/new') }}">
-                            <i class="fa fa-plus"></i>
-                            <p>Request Publication</p>
+                    <li id="companies">
+                        <a href="{{ url('client/companies') }}">
+                            <i class="fa fa-industry"></i>
+                            <p>Companies</p>
                         </a>
                     </li>
                 @endrole

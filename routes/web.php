@@ -29,6 +29,13 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth', 'role:client'],
         Route::get('new', 'PublicationsController@showRequestPublicationForm');
         Route::post('new', 'PublicationsController@requestNewPublication')->name('requestNewPublication');
     });
+
+    // Companies
+    Route::group(['prefix' => 'companies'], function() {
+        Route::get('/', 'CompaniesController@index');
+        Route::get('new', 'CompaniesController@newCompany')->name('newCompany');
+        Route::post('new', 'CompaniesController@addNewCompany')->name('addNewCompany');
+    });
 });
 
 // Routes for Publisher

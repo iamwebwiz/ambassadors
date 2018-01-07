@@ -29,9 +29,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function company()
+    public function companies()
     {
-        return $this->hasOne(Company::class);
+        return $this->hasMany(Company::class);
     }
 
     public function publications()
