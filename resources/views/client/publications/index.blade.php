@@ -22,6 +22,7 @@
                                     <th>ID</th>
                                     <th>Title</th>
                                     <th>Description</th>
+                                    <th>Company</th>
                                     <th>Date Added</th>
                                 </thead>
                                 <tbody>
@@ -30,6 +31,7 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $advert->title }}</td>
                                             <td>{{ str_limit($advert->body, $limit = 30, $end = '...') }}</td>
+                                            <td>{{ $advert->company->name }}</td>
                                             <td>{{ $advert->created_at->format('jS F Y') }}</td>
                                         </tr>
                                     @endforeach

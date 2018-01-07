@@ -68,7 +68,7 @@
                 @role('client')
                     <li id="companies">
                         <a href="{{ url('client/companies') }}">
-                            <i class="fa fa-industry"></i>
+                            <i class="fa fa-building-o"></i>
                             <p>Companies</p>
                         </a>
                     </li>
