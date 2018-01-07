@@ -26,7 +26,8 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth', 'role:client'],
 
     // Publications
     Route::group(['prefix' => 'publications'], function() {
-        Route::get('new', 'PublicationsController@showRequestPublicationForm');
+        Route::get('/', 'PublicationsController@index')->name('client.publications');
+        Route::get('new', 'PublicationsController@showRequestPublicationForm')->name('client.newPublication');
         Route::post('new', 'PublicationsController@requestNewPublication')->name('requestNewPublication');
     });
 

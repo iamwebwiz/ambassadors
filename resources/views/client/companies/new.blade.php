@@ -14,13 +14,13 @@
                                 <div class="form-group">
                                     <label>Company Name</label>
                                     <input type="text" name="company_name" placeholder="Company Name" class="form-control"
-                                    value="{{ old('company_name') }}">
+                                    value="{{ old('company_name') }}" style="border:1px solid gray;background:gray;color:#fff">
                                 </div>
 
                                 <div class="form-group">
                                     <label>Address</label>
                                     <input type="address" name="company_address" placeholder="Company Address" class="form-control"
-                                    value="{{ old('company_address') }}">
+                                    value="{{ old('company_address') }}" style="border:1px solid gray;background:gray;color:#fff">
                                 </div>
 
                                 <div class="form-group">

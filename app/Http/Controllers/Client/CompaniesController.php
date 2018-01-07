@@ -18,6 +18,7 @@ class CompaniesController extends Controller
     public function index()
     {
         $data['user'] = auth()->user();
+        $data['title'] = "My Companies";
         return view('client/companies/index', $data);
     }
 

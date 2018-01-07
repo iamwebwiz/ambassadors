@@ -11,7 +11,6 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-
     <!-- Bootstrap core CSS     -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 
@@ -71,6 +70,12 @@
                         <a href="{{ url('client/companies') }}">
                             <i class="fa fa-industry"></i>
                             <p>Companies</p>
+                        </a>
+                    </li>
+                    <li id="publications">
+                        <a href="{{ url('client/publications') }}">
+                            <i class="ti-medall-alt"></i>
+                            <p>Publications</p>
                         </a>
                     </li>
                 @endrole

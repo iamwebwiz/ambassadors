@@ -16,7 +16,9 @@ class PublicationsController extends Controller
 
     public function index()
     {
-        //
+        $data['title'] = "My Publications";
+        $data['user'] = auth()->user();
+        return view('client/publications/index', $data);
     }
 
     public function showRequestPublicationForm()

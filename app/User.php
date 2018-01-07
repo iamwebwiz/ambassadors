@@ -38,4 +38,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Publication::class);
     }
+
+    public function advertRequests()
+    {
+        return $this->hasMany(AdvertRequest::class);
+    }
 }
