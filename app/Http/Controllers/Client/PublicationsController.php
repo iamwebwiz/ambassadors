@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Client;
 
+use App\AdvertRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Client\NewPublication;
 use Illuminate\Http\Request;
@@ -23,11 +24,18 @@ class PublicationsController extends Controller
 
     public function showRequestPublicationForm()
     {
-        return view('client/publications/new');
+        $data['title'] = "New Publication Request";
+        return view('client/publications/new', $data);
     }
 
     public function requestNewPublication(NewPublication $request)
     {
-        //
+        $user = auth()->user();
+
+        $advert = new AdvertRequest;
+        $advert->title = $request->title;
+        $advert->body = $request->description;
+        $user->advertRequests()->save($advert);
+        return redirect(route('client.publications'));
     }
 }

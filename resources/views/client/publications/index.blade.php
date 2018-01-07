@@ -15,30 +15,30 @@
                         </div>
                     </div>
                     <br><br>
-                    {{-- @if ($user->publications->count() > 0)
+                    @if ($user->advertRequests->count() > 0)
                         <div class="table-responsive table-full-width">
                             <table class="table table-hover table-striped">
                                 <thead>
                                     <th>ID</th>
-                                    <th>Company Name</th>
-                                    <th>Address</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
                                     <th>Date Added</th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($user->publications as $publication)
+                                    @foreach ($user->advertRequests as $advert)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $publication->name }}</td>
-                                            <td>{{ $publication->address }}</td>
-                                            <td>{{ $publication->created_at->format('jS F Y') }}</td>
+                                            <td>{{ $advert->title }}</td>
+                                            <td>{{ str_limit($advert->body, $limit = 30, $end = '...') }}</td>
+                                            <td>{{ $advert->created_at->format('jS F Y') }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
                             </table>
                         </div>
-                    @else --}}
+                    @else
                         <h3 class="text-center">No Publications Added Just Yet!</h3>
-                    {{-- @endif --}}
+                    @endif
                 </div>
             </div>
         </div>
