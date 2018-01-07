@@ -35,6 +35,7 @@ class PublicationsController extends Controller
         $advert = new AdvertRequest;
         $advert->title = $request->title;
         $advert->body = $request->description;
+        $advert->company_id = $request->company;
         $user->advertRequests()->save($advert);
         return redirect(route('client.publications'));
     }

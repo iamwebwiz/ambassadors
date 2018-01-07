@@ -22,6 +22,7 @@
                                     <th>ID</th>
                                     <th>Company Name</th>
                                     <th>Address</th>
+                                    <th>Adverts</th>
                                     <th>Date Added</th>
                                 </thead>
                                 <tbody>
@@ -30,12 +31,8 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $company->name }}</td>
                                             <td>{{ $company->address }}</td>
+                                            <td>{{ $company->advertRequests->count() }}</td>
                                             <td>{{ $company->created_at->format('jS F Y') }}</td>
-                                            <td>
-                                                <button class="btn btn-info btn-fill">
-                                                    Edit
-                                                </button>
-                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

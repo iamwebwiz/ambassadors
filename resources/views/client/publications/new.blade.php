@@ -11,10 +11,21 @@
                         <div class="col-sm-10 col-sm-offset-1">
                             <form action="{{ route('requestNewPublication') }}" method="post">
                                 {{ csrf_field() }}
+
                                 <div class="form-group">
                                     <label>Advert Title</label>
                                     <input type="text" name="title" placeholder="Title" class="form-control" required
                                     style="border:1px solid gray">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <select name="company" class="form-control" style="border:1px solid gray">
+                                        <option value="">Choose Company</option>
+                                        @foreach (auth()->user()->companies as $company)
+                                            <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
                                 <div class="form-group">
