@@ -15,24 +15,30 @@
                         </div>
                     </div>
                     <br><br>
-                    <div class="table-responsive">
-                        <table class="table table-hover table-striped">
-                            <thead>
-                                <th>#</th>
-                                <th>Company Name</th>
-                                <th>Address</th>
-                                <th>Date Added</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Shitty Company</td>
-                                    <td>34, Ede Street, Nigeria</td>
-                                    <td>24/07/2019</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    @if ($companies->count() > 0)
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <th>#</th>
+                                    <th>Company Name</th>
+                                    <th>Address</th>
+                                    <th>Date Added</th>
+                                </thead>
+                                <tbody>
+                                    @foreach ($companies as $company)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $company->name }}</td>
+                                            <td>{{ $company->address }}</td>
+                                            <td>{{ $company->created_at->diffForHumans() }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    @else
+                        <h3 class="text-center">No Companies Added Just Yet!</h3>
+                    @endif
                 </div>
             </div>
         </div>
