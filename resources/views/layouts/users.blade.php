@@ -35,139 +35,136 @@
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="sidebar" data-background-color="black" data-active-color="info">
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="black" data-active-color="info">
 
-    <!--
-        Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
-        Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
-    -->
+        <!--
+            Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+            Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+        -->
 
-        <div class="sidebar-wrapper">
-            <div class="logo">
-                <a href="#" class="simple-text">
-                    {{ auth()->user()->name }}
-                </a>
-            </div>
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="#" class="simple-text">
+                        {{ auth()->user()->name }}
+                    </a>
+                </div>
 
-            <ul class="nav">
-                <li id="dashboard">
+                <ul class="nav">
+                    <li id="dashboard">
+                        @role('client')
+                            <a href="{{ url('client') }}">
+                                <i class="ti-pie-chart"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        @endrole
+                        @role('publisher')
+                            <a href="{{ url('publisher') }}">
+                                <i class="ti-pie-chart"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        @endrole
+                    </li>
                     @role('client')
-                        <a href="{{ url('client') }}">
-                            <i class="ti-pie-chart"></i>
-                            <p>Dashboard</p>
-                        </a>
+                        <li id="companies">
+                            <a href="{{ url('client/companies') }}">
+                                <i class="fa fa-building-o"></i>
+                                <p>Companies</p>
+                            </a>
+                        </li>
+                        <li id="publications">
+                            <a href="{{ url('client/publications') }}">
+                                <i class="ti-medall-alt"></i>
+                                <p>Publications</p>
+                            </a>
+                        </li>
                     @endrole
                     @role('publisher')
-                        <a href="{{ url('publisher') }}">
-                            <i class="ti-pie-chart"></i>
-                            <p>Dashboard</p>
-                        </a>
+                        <li id="publications">
+                            <a href="{{ url('publisher/publications') }}">
+                                <i class="ti-layout-grid2"></i>
+                                <p>My Publications</p>
+                            </a>
+                        </li>
+                        <li id="new-publication">
+                            <a href="{{ url('publisher/publications/new') }}">
+                                <i class="fa fa-plus"></i>
+                                <p>New Publication</p>
+                            </a>
+                        </li>
                     @endrole
-                </li>
-                @role('client')
-                    <li id="companies">
-                        <a href="{{ url('client/companies') }}">
-                            <i class="fa fa-building-o"></i>
-                            <p>Companies</p>
-                        </a>
-                    </li>
-                    <li id="publications">
-                        <a href="{{ url('client/publications') }}">
-                            <i class="ti-medall-alt"></i>
-                            <p>Publications</p>
-                        </a>
-                    </li>
-                @endrole
-                @role('publisher')
-                    <li id="publications">
-                        <a href="{{ url('publisher/publications') }}">
-                            <i class="ti-layout-grid2"></i>
-                            <p>My Publications</p>
-                        </a>
-                    </li>
-                    <li id="new-publication">
-                        <a href="{{ url('publisher/publications/new') }}">
-                            <i class="fa fa-plus"></i>
-                            <p>New Publication</p>
-                        </a>
-                    </li>
-                @endrole
-            </ul>
-        </div>
-    </div>
-
-    <div class="main-panel">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Digital Ambassadors</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-panel"></i>
-                                <p>Stats</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="ti-bell"></i>
-                                    <p class="notification">5</p>
-                                    <p>Notifications</p>
-                                    <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                            <a href="{{ url('logout') }}">
-                                <i class="fa fa-sign-out"></i>
-                                <p>Logout</p>
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-
-
-        <div class="content">
-            <div class="container-fluid">
-                @yield('body')
+                </ul>
             </div>
         </div>
 
+        <div class="main-panel">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar bar1"></span>
+                            <span class="icon-bar bar2"></span>
+                            <span class="icon-bar bar3"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Digital Ambassadors</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-panel"></i>
+                                    <p>Stats</p>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="ti-bell"></i>
+                                        <p class="notification">5</p>
+                                        <p>Notifications</p>
+                                        <b class="caret"></b>
+                                  </a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#">Notification 1</a></li>
+                                    <li><a href="#">Notification 2</a></li>
+                                    <li><a href="#">Notification 3</a></li>
+                                    <li><a href="#">Notification 4</a></li>
+                                    <li><a href="#">Another notification</a></li>
+                                  </ul>
+                            </li>
+                            <li>
+                                <a href="{{ url('logout') }}">
+                                    <i class="fa fa-sign-out"></i>
+                                    <p>Logout</p>
+                                </a>
+                            </li>
+                        </ul>
 
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="copyright pull-right">
-                    &copy; 2018 <a href="http://dgambassadors.com">Digital Ambassadors</a> | All Rights Reserved
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="content">
+                <div class="container-fluid">
+                    @yield('body')
                 </div>
             </div>
-        </footer>
 
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="copyright pull-right">
+                        &copy; 2018 <a href="http://dgambassadors.com">Digital Ambassadors</a> | All Rights Reserved
+                    </div>
+                </div>
+            </footer>
+
+        </div>
     </div>
-</div>
-
-
-</body>
 
     <!--   Core JS Files   -->
-    <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
     <!--  Checkbox, Radio & Switch Plugins -->
     <script src="{{ asset('js/bootstrap-checkbox-radio.js') }}"></script>
@@ -178,14 +175,12 @@
     <!--  Notifications Plugin    -->
     <script src="{{ asset('js/bootstrap-notify.js') }}"></script>
 
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
     <script src="{{ asset('js/paper-dashboard.js') }}"></script>
 
     <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
     <script src="{{ asset('js/demo.js') }}"></script>
 
+</body>
 
 </html>

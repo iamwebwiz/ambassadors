@@ -6,6 +6,7 @@ use App\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Client\NewCompany;
 use Illuminate\Http\Request;
+use Laracasts\Flash\flash;
 
 class CompaniesController extends Controller
 {
