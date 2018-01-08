@@ -2,11 +2,13 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
+    use EntrustUserTrait;
     use Notifiable;
 
     /**
@@ -26,4 +28,19 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function companies()
+    {
+        return $this->hasMany(Company::class);
+    }
+
+    public function publications()
+    {
+        return $this->hasMany(Publication::class);
+    }
+
+    public function advertRequests()
+    {
+        return $this->hasMany(AdvertRequest::class);
+    }
 }

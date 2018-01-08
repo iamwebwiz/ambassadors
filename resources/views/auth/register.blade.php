@@ -11,6 +11,16 @@
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Account type</label>
+                            <div class="col-md-6">
+                                <select name="account_type" class="form-control">
+                                    <option value="client">Business Owner</option>
+                                    <option value="publisher">Publisher</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
