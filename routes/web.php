@@ -57,4 +57,8 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
     'namespace' => 'Admin'], function() {
     Route::get('/', 'HomeController@index');
+
+    Route::group(['prefix' => 'advert-requests'], function() {
+        Route::get('/', 'AdvertRequestsController@index');
+    });
 });

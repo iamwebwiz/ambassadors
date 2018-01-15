@@ -53,10 +53,16 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li id="dashboard">
                     <a href="{{ url('admin') }}">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
+                    </a>
+                </li>
+                <li id="advert_requests">
+                    <a href="{{ url('admin/advert-requests') }}">
+                        <i class="fa fa-question"></i>
+                        <p>Advert Requests</p>
                     </a>
                 </li>
             </ul>
