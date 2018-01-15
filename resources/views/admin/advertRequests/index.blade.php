@@ -27,6 +27,7 @@
                     </tbody>
                 </table>
             </div>
+            {{ $advertRequests->links() }}
         </div>
     </div>
 
