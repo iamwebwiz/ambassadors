@@ -65,6 +65,18 @@
                         <p>Advert Requests</p>
                     </a>
                 </li>
+                <li id="clients">
+                    <a href="{{ url('admin/clients') }}">
+                        <i class="pe-7s-users"></i>
+                        <p>Clients</p>
+                    </a>
+                </li>
+                <li id="publishers">
+                    <a href="{{ url('admin/publishers') }}">
+                        <i class="pe-7s-users"></i>
+                        <p>Publishers</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
