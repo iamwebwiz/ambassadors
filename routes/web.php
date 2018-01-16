@@ -61,4 +61,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
     Route::group(['prefix' => 'advert-requests'], function() {
         Route::get('/', 'AdvertRequestsController@index');
     });
+
+    Route::get('clients', 'HomeController@showAllClients');
+    Route::get('publishers', 'HomeController@showAllPublishers');
 });

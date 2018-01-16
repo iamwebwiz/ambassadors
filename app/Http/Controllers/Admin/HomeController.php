@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -22,8 +23,7 @@ class HomeController extends Controller
 
     public function showAllClients()
     {
-        $users = User::all();
-        $this->data['clients'] = $users->withRole('client');
+        $this->data['users'] = User::all();
         $this->data['title'] = "DGAmbassadors Clients";
 
         return view('admin.clients.index', $this->data);
