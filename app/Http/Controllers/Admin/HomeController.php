@@ -31,8 +31,7 @@ class HomeController extends Controller
 
     public function showAllPublishers()
     {
-        $users = User::all();
-        $this->data['publishers'] = $users->withRole('publisher');
+        $this->data['users'] = User::all();
         $this->data['title'] = "DGAmbassadors Publishers";
 
         return view('admin.publishers.index', $this->data);
