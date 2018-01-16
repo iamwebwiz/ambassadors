@@ -2,33 +2,30 @@
 
 @section('body')
 
-    <h1 class="page-header">Advert Requests</h1>
+    <h1 class="page-header">Clients</h1>
     <div class="card">
         <div class="content">
             <div class="table-responsive table-full-width">
                 <table class="table table-hover table-striped">
                     <thead>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th>Body</th>
-                        <th>Client</th>
-                        <th>Company</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Joined</th>
                     </thead>
                     <tbody>
-                        @foreach ($users as $client)
-                            @if ($client->hasRole('client'))
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $client['name'] }}</td>
-                                    <td>{{ $client['email'] }}</td>
-                                    <td>{{ $client->role()->name }}</td>
-                                    <td>{{ $client['created_at']->format('d/M/Y') }}</td>
-                                </tr>
-                            @endif
+                        @foreach ($clients as $client)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $client->name }}</td>
+                                <td>{{ $client->email }}</td>
+                                <td>{{ $client->created_at->format('d/M/Y') }}</td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
+            {{ $clients->links() }}
         </div>
     </div>
 

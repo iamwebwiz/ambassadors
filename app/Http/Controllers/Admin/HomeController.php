@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Role;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +23,7 @@ class HomeController extends Controller
 
     public function showAllClients()
     {
-        $this->data['users'] = User::all();
+        $this->data['clients'] = Role::where('name', 'client')->first()->users()->paginate(30);
         $this->data['title'] = "DGAmbassadors Clients";
 
         return view('admin.clients.index', $this->data);
@@ -31,7 +31,7 @@ class HomeController extends Controller
 
     public function showAllPublishers()
     {
-        $this->data['users'] = User::all();
+        $this->data['publishers'] = Role::where('name', 'publisher')->first()->users()->paginate(30);
         $this->data['title'] = "DGAmbassadors Publishers";
 
         return view('admin.publishers.index', $this->data);
