@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://dgambassadors.io'),
+    'url' => env('APP_URL', 'http://dgambassadors.com'),
 
     /*
     |--------------------------------------------------------------------------
