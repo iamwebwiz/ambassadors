@@ -20,6 +20,11 @@
                                 <td>{{ $client->name }}</td>
                                 <td>{{ $client->email }}</td>
                                 <td>{{ $client->created_at->format('d/M/Y') }}</td>
+                                <td>
+                                    <a href="/" class="btn btn-fill btn-info">
+                                        Edit
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
