@@ -2,30 +2,36 @@
 
 @section('body')
 
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
-    </section>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
 
-    <!-- Main content -->
-    <section class="content container-fluid">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Page Header
+                <small>Optional description</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                <li class="active">Here</li>
+            </ol>
+        </section>
 
-      <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
+        <!-- Main content -->
+        <section class="content container-fluid">
 
-    </section>
-    <!-- /.content -->
+          <!--------------------------
+            | Your Page Content Here |
+            -------------------------->
+
+        </section>
+        <!-- /.content -->
+
+    </div>
+    <!-- /.content-wrapper -->
 
     <script>
-        $("#dashboard").addClass("active");
+        $('#dashboard').addClass('active');
     </script>
 
 @stop
