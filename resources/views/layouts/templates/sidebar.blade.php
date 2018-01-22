@@ -39,6 +39,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+
                 <li class="treeview" id="users">
                     <a href="#"><i class="fa fa-users"></i> <span>Users</span>
                         <span class="pull-right-container">
@@ -47,18 +48,25 @@
                     </a>
                     <ul class="treeview-menu">
                         <li id="clients">
-                            <a href="{{ url('admin/clients') }}">
+                            <a href="{{ url('admin/users/clients') }}">
                                 <i class="fa fa-briefcase"></i>
                                 <span>Clients</span>
                             </a>
                         </li>
                         <li id="publishers">
-                            <a href="{{ url('admin/publishers') }}">
+                            <a href="{{ url('admin/users/publishers') }}">
                                 <i class="fa fa-user-secret"></i>
                                 <span>Publishers</span>
                             </a>
                         </li>
                     </ul>
+                </li>
+
+                <li id="companies">
+                    <a href="#">
+                        <i class="fa fa-building-o"></i>
+                        <span>Companies</span>
+                    </a>
                 </li>
             </ul>
             <!-- /.sidebar-menu -->

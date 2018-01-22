@@ -8,48 +8,46 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Page Header
-                <small>Optional description</small>
+                Clients
+                <small>Site Business Owners</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
+                <li><a href="{{ route('admin.dash') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{ url('#') }}"><i class="fa fa-users"></i> Users</a></li>
+                <li class="active">Clients</li>
             </ol>
         </section>
 
         <!-- Main content -->
         <section class="content container-fluid">
 
-            <h1 class="page-heading">Clients</h1>
-            <div class="card">
-                <div class="content">
-                    <div class="table-responsive table-full-width">
-                        <table class="table table-hover table-striped">
-                            <thead>
-                                <th>ID</th>
-                                <th>Full Name</th>
-                                <th>Email</th>
-                                <th>Joined</th>
-                            </thead>
-                            <tbody>
-                                @foreach ($clients as $client)
-                                    <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $client->name }}</td>
-                                        <td>{{ $client->email }}</td>
-                                        <td>{{ $client->created_at->format('d/M/Y') }}</td>
-                                        <td>
-                                            <a href="/" class="btn btn-fill btn-info">
-                                                Edit
-                                            </a>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                    {{ $clients->links() }}
+            <div class="box box-primary">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Joined</th>
+                        </thead>
+                        <tbody>
+                            @foreach ($clients as $client)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $client->name }}</td>
+                                    <td>{{ $client->email }}</td>
+                                    <td>{{ $client->created_at->format('d/M/Y') }}</td>
+                                    <td>
+                                        <a href="#" class="btn btn-fill btn-info">
+                                            Edit
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
+                {{ $clients->links() }}
             </div>
 
         </section>
@@ -59,7 +57,7 @@
     <!-- /.content-wrapper -->
 
     <script>
-        $('#users').addClass('active');
+        $('#users, #clients').addClass('active');
     </script>
 
 @stop
