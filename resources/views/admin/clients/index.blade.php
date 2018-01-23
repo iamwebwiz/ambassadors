@@ -110,6 +110,7 @@
 
     <script>
         $('#users, #clients').addClass('active');
+
         $('a#deleteClient').on('click', function(e) {
             var response = confirm('Do you really want to delete this user?');
             if (response === true) {
