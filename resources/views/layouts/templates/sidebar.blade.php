@@ -63,7 +63,7 @@
                 </li>
 
                 <li id="companies">
-                    <a href="#">
+                    <a href="{{ url('admin/companies') }}">
                         <i class="fa fa-building-o"></i>
                         <span>Companies</span>
                     </a>

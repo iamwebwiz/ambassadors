@@ -68,4 +68,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
         Route::get('publishers', 'HomeController@showAllPublishers');
         Route::post('publishers', 'UsersController@addNewPublisher')->name('addNewPublisher');
     });
+
+    Route::get('companies', 'CompaniesController@index');
 });
