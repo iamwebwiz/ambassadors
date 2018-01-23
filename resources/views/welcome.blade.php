@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <title>Digital Ambassadors &mdash; Soft Work</title>
+        <title>DGAmbassadors | Digital Ambassadors | Soft Work</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -16,12 +16,12 @@
         <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700' rel='stylesheet' type='text/css'>
-        <script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
-        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="js/camera.min.js"></script>
-        <script type="text/javascript" src="js/myscript.js"></script>
-        <script src="js/sorting.js" type="text/javascript"></script>
-        <script src="js/jquery.isotope.js" type="text/javascript"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.mobile.customized.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/camera.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/myscript.js') }}"></script>
+        <script src="{{ asset('js/sorting.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/jquery.isotope.js') }}" type="text/javascript"></script>
         <!--script type="text/javascript" src="js/jquery.nav.js"></script-->
 
 

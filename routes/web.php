@@ -64,6 +64,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
 
     Route::group(['prefix' => 'users'], function() {
         Route::get('clients', 'HomeController@showAllClients');
+        Route::post('clients', 'UsersController@addNewClient')->name('addNewClient');
         Route::get('publishers', 'HomeController@showAllPublishers');
     });
 });
