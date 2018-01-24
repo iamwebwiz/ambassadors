@@ -68,6 +68,13 @@
                         <span>Companies</span>
                     </a>
                 </li>
+
+                <li id="advertRequests">
+                    <a href="{{ url('admin/advert-requests') }}">
+                        <i class="fa fa-question"></i>
+                        <span>Advert Requests</span>
+                    </a>
+                </li>
             </ul>
             <!-- /.sidebar-menu -->
         </section>

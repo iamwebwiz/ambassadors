@@ -18,7 +18,7 @@ class AdvertRequestsController extends Controller
     {
         $data = [];
         $data['title'] = "Advert Requests";
-        $data['advertRequests'] = AdvertRequest::paginate(30);
+        $data['requests'] = AdvertRequest::paginate(30);
         return view('admin.advertRequests.index', $data);
     }
 }
