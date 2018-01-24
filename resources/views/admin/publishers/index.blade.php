@@ -41,7 +41,7 @@
                             @foreach ($publishers as $publisher)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $publisher->name }}</td>
+                                    <td>{{ title_case($publisher->name) }}</td>
                                     <td>{{ $publisher->email }}</td>
                                     <td>{{ $publisher->created_at->format('d/M/Y') }}</td>
                                     <td>
@@ -54,8 +54,6 @@
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Edit</a></li>
                                                 <li><a href="#" id="deletePublisher">Delete</a></li>
-                                                {{-- <li class="divider"></li> --}}
-                                                {{-- <li><a href="#">Separated link</a></li> --}}
                                             </ul>
                                         </div>
                                     </td>

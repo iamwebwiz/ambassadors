@@ -41,7 +41,7 @@
                             @foreach ($clients as $client)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $client->name }}</td>
+                                    <td>{{ title_case($client->name) }}</td>
                                     <td>{{ $client->email }}</td>
                                     <td>{{ $client->created_at->format('d/M/Y') }}</td>
                                     <td>
@@ -54,8 +54,6 @@
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Edit</a></li>
                                                 <li><a href="#" id="deleteClient">Delete</a></li>
-                                                {{-- <li class="divider"></li> --}}
-                                                {{-- <li><a href="#">Separated link</a></li> --}}
                                             </ul>
                                         </div>
                                     </td>
