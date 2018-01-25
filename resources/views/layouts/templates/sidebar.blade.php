@@ -75,6 +75,13 @@
                         <span>Advert Requests</span>
                     </a>
                 </li>
+
+                <li id="tasks">
+                    <a href="{{ url('/') }}">
+                        <i class="fa fa-tasks"></i>
+                        <span>Tasks</span>
+                    </a>
+                </li>
             </ul>
             <!-- /.sidebar-menu -->
         </section>

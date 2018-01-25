@@ -30,6 +30,7 @@
                                 <th>Body</th>
                                 <th>Client</th>
                                 <th>Company</th>
+                                <th>Status</th>
                             </thead>
                             <tbody>
                                 @foreach ($requests as $advert)
@@ -39,6 +40,33 @@
                                         <td>{{ ucfirst($advert->body) }}</td>
                                         <td>{{ title_case($advert->user->name) }}</td>
                                         <td>{{ $advert->company->name }}</td>
+                                        <td>
+                                            <?php
+                                                switch ($advert->status) {
+                                                    case "Pending":
+                                                        echo "<div class='label label-default'>Pending</div>";
+                                                        break;
+                                                    case "Matched":
+                                                        echo "<div class='label label-warning'>Matched</div>";
+                                                        break;
+                                                    case "Processing":
+                                                        echo "<div class='label label-info'>Processing</div>";
+                                                        break;
+                                                    case "Finished":
+                                                        echo "<div class='label label-success'>Finished</div>";
+                                                        break;
+                                                    default:
+                                                        echo "";
+                                                }
+                                            ?>
+                                        </td>
+                                        <td>
+                                            @if ($advert->status == "Pending")
+                                                <a href="{{ route('matchAdvertToPublisher', ['id'=>$advert->id]) }}" class="btn btn-default">
+                                                    Assign Publisher
+                                                </a>
+                                            @endif
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

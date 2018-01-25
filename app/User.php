@@ -43,4 +43,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(AdvertRequest::class);
     }
+
+    public function matchings()
+    {
+        return $this->hasMany(Matching::class);
+    }
 }

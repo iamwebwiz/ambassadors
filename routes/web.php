@@ -60,6 +60,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
 
     Route::group(['prefix' => 'advert-requests'], function() {
         Route::get('/', 'AdvertRequestsController@index');
+        Route::get('{id}/match', 'AdvertRequestsController@showPublishers')->name('matchAdvertToPublisher');
     });
 
     Route::group(['prefix' => 'users'], function() {

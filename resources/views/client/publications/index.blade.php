@@ -24,6 +24,7 @@
                                     <th>Description</th>
                                     <th>Company</th>
                                     <th>Date Added</th>
+                                    <th>Status</th>
                                 </thead>
                                 <tbody>
                                     @foreach ($user->advertRequests as $advert)
@@ -33,6 +34,7 @@
                                             <td>{{ str_limit($advert->body, $limit = 30, $end = '...') }}</td>
                                             <td>{{ $advert->company->name }}</td>
                                             <td>{{ $advert->created_at->format('jS F Y') }}</td>
+                                            <td>{{ $advert->status }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
