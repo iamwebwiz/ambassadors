@@ -62,7 +62,7 @@
                                         </td>
                                         <td>
                                             @if ($advert->status == "Pending")
-                                                <a href="{{ route('matchAdvertToPublisher', ['id'=>$advert->id]) }}" class="btn btn-default">
+                                                <a href="{{ route('matchAdvertToPublisher', ['advert'=>$advert->id]) }}" class="btn btn-default">
                                                     Assign Publisher
                                                 </a>
                                             @endif

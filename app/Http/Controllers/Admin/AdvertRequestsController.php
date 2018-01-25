@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\AdvertRequest;
 use App\Http\Controllers\Controller;
+use App\Matching;
 use App\Role;
 use Illuminate\Http\Request;
 
@@ -34,5 +35,22 @@ class AdvertRequestsController extends Controller
         $data['title'] = "Match Advert to Publisher";
 
         return view('admin.advertRequests.matching', $data);
+    }
+
+    public function doMatching(Request $request, $advertID, $publisherID)
+    {
+        $advert = AdvertRequest::findOrFail($advertID);
+
+        $matching = new Matching;
+        $matching->advert_request_id = $advertID;
+        $matching->user_id = $publisherID;
+        if ($matching->save()) {
+            $advert->status = "Matched";
+            $advert->save();
+
+            return redirect()->route('admin.advertRequests');
+        } else {
+            return back();
+        }
     }
 }

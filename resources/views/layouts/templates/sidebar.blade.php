@@ -77,7 +77,7 @@
                 </li>
 
                 <li id="tasks">
-                    <a href="{{ url('/') }}">
+                    <a href="{{ route('admin.showAllTasks') }}">
                         <i class="fa fa-tasks"></i>
                         <span>Tasks</span>
                     </a>

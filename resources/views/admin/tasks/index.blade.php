@@ -22,7 +22,26 @@
 
             <div class="box box-primary">
                 <div class="box-body">
-                    {{--  --}}
+                    <table class="table table-striped">
+                        <thead>
+                            <th>#</th>
+                            <th>Advert</th>
+                            <th>Publisher Assigned</th>
+                            <th>Date Assigned</th>
+                        </thead>
+                        <tbody>
+                            @forelse($tasks as $task)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $task->advertRequest->title }}</td>
+                                    <td>{{ $task->user->name }}</td>
+                                    <td>{{ $task->created_at }}</td>
+                                </tr>
+                            @empty
+                                Nothing to show here so far.
+                            @endforelse
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

@@ -59,8 +59,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
     Route::get('dashboard', 'HomeController@index')->name('admin.dash');
 
     Route::group(['prefix' => 'advert-requests'], function() {
-        Route::get('/', 'AdvertRequestsController@index');
-        Route::get('{id}/match', 'AdvertRequestsController@showPublishers')->name('matchAdvertToPublisher');
+        Route::get('/', 'AdvertRequestsController@index')->name('admin.advertRequests');
+        Route::get('{advert}/match', 'AdvertRequestsController@showPublishers')->name('matchAdvertToPublisher');
+        Route::post('{advert}/match/{publisher}', 'AdvertRequestsController@doMatching')->name('doMatching');
     });
 
     Route::group(['prefix' => 'users'], function() {
@@ -71,4 +72,5 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
     });
 
     Route::get('companies', 'CompaniesController@index');
+    Route::get('tasks', 'TasksController@index')->name('admin.showAllTasks');
 });

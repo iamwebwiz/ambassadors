@@ -36,7 +36,12 @@
                                     <td>{{ title_case($publisher->name) }}</td>
                                     <td>{{ $publisher->email }}</td>
                                     <td>
-                                        <button class="btn btn-info">Match</button>
+                                        <form action="{{ route('doMatching', [
+                                            'advert' => $advert->id,
+                                            'publisher' => $publisher->id]) }}" method="post">
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-info">Match</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @empty
