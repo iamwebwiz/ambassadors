@@ -18,7 +18,7 @@ class TasksController extends Controller
 
     public function index() {
         $this->data['title'] = "My Tasks";
-        $this->data['tasks'] = Matching::where('user_id', Auth::id())->first();
+        $this->data['tasks'] = Matching::where('user_id', Auth::id())->paginate(20);
 
         return view('publisher.tasks.index', $this->data);
     }
