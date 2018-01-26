@@ -63,7 +63,7 @@
         $("#tasks").addClass("active");
 
         $('button.deleteMatching').on('click', function(event) {
-            // event.preventDefault();
+            // console.log(event);
             var response = confirm("Do you really want to delete this matching?");
 
             if (response === true) {
