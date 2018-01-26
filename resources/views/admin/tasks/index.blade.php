@@ -37,7 +37,12 @@
                                     <td>{{ title_case($task->user->name) }}</td>
                                     <td>{{ $task->created_at }}</td>
                                     <td>
-                                        <button class="btn btn-danger">Delete Matching</button>
+                                        <form action="{{ route('deleteMatching', ['task'=>$task->id]) }}" method="post">
+                                            {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-danger deleteMatching">
+                                                Delete Matching
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             @empty
@@ -56,6 +61,17 @@
 
     <script>
         $("#tasks").addClass("active");
+
+        $('button.deleteMatching').on('click', function(event) {
+            // event.preventDefault();
+            var response = confirm("Do you really want to delete this matching?");
+
+            if (response === true) {
+                return true;
+            } else {
+                return false;
+            }
+        });
     </script>
 
 @stop

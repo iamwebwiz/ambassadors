@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\AdvertRequest;
 use App\Http\Controllers\Controller;
 use App\Matching;
 use Illuminate\Http\Request;
@@ -21,5 +22,35 @@ class TasksController extends Controller
         $this->data['title'] = "Tasks";
         $this->data['tasks'] = Matching::all();
         return view('admin.tasks.index', $this->data);
+    }
+
+    public function doMatching(Request $request, $advertID, $publisherID)
+    {
+        $advert = AdvertRequest::findOrFail($advertID);
+
+        $matching = new Matching;
+        $matching->match_id = str_random(10);
+        $matching->advert_request_id = $advertID;
+        $matching->user_id = $publisherID;
+        if ($matching->save()) {
+            $advert->status = "Matched";
+            $advert->save();
+
+            return redirect()->route('admin.showAllTasks');
+        } else {
+            return back();
+        }
+    }
+
+    public function deleteMatching(Request $request, $matchID)
+    {
+        $match = Matching::findOrFail($matchID);
+        $advert_id = $match->advert_request_id;
+        $advert = AdvertRequest::findOrFail($advert_id);
+        $advert->status = "Pending";
+        $advert->save();
+        $match->delete();
+
+        return back();
     }
 }
