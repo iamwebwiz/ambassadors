@@ -8,12 +8,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Page Header
-                <small>Optional description</small>
+                Advertisement Requests
+                <small>Requests made by clients for marketing</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
+                <li><a href="{{ route('admin.dash') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Advert Requests</li>
             </ol>
         </section>
 
@@ -60,13 +60,21 @@
                                                 }
                                             ?>
                                         </td>
-                                        <td>
-                                            @if ($advert->status == "Pending")
-                                                <a href="{{ route('matchAdvertToPublisher', ['advert'=>$advert->id]) }}" class="btn btn-default">
+                                        @if ($advert->status == "Pending")
+                                            <td>
+                                                <a href="{{ route('matchAdvertToPublisher', ['advert'=>$advert->id]) }}"
+                                                    class="btn btn-sm btn-default">
                                                     Assign Publisher
                                                 </a>
-                                            @endif
-                                        </td>
+                                            </td>
+                                        @endif
+                                        @if ($advert->status == "Processing")
+                                            <td>
+                                                <a href="/" class="btn btn-sm btn-default">
+                                                    View Work Progress
+                                                </a>
+                                            </td>
+                                        @endif
                                     </tr>
                                 @endforeach
                             </tbody>
