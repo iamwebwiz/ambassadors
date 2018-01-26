@@ -8,12 +8,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Page Header
-                <small>Optional description</small>
+                {{ $title }}
+                <small>Advert Request Matches to Publishers</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
+                <li><a href="{{ route('admin.dash') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Tasks</li>
             </ol>
         </section>
 
@@ -33,9 +33,12 @@
                             @forelse($tasks as $task)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $task->advertRequest->title }}</td>
-                                    <td>{{ $task->user->name }}</td>
+                                    <td>{{ ucfirst($task->advertRequest->title) }}</td>
+                                    <td>{{ title_case($task->user->name) }}</td>
                                     <td>{{ $task->created_at }}</td>
+                                    <td>
+                                        <button class="btn btn-danger">Delete Matching</button>
+                                    </td>
                                 </tr>
                             @empty
                                 Nothing to show here so far.

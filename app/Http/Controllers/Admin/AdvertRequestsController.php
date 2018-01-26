@@ -42,13 +42,14 @@ class AdvertRequestsController extends Controller
         $advert = AdvertRequest::findOrFail($advertID);
 
         $matching = new Matching;
+        $matching->match_id = str_random(10);
         $matching->advert_request_id = $advertID;
         $matching->user_id = $publisherID;
         if ($matching->save()) {
             $advert->status = "Matched";
             $advert->save();
 
-            return redirect()->route('admin.advertRequests');
+            return redirect()->route('admin.showAllTasks');
         } else {
             return back();
         }
