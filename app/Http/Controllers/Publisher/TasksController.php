@@ -22,4 +22,13 @@ class TasksController extends Controller
 
         return view('publisher.tasks.index', $this->data);
     }
+
+    public function showTaskDetail($taskID) {
+        $task = Matching::where('match_id', $taskID)->first();
+        $advert_title = $task->advertRequest->title;
+        $this->data['title'] = "Details for ".ucfirst($advert_title);
+        $this->data['task'] = $task;
+
+        return view('publisher.tasks.details', $this->data);
+    }
 }

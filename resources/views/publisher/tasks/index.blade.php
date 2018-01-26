@@ -22,7 +22,8 @@
                                     <td>{{ ucfirst($task->advertRequest->company->name) }}</td>
                                     <td>{{ title_case($task->advertRequest->company->user->name) }}</td>
                                     <td>
-                                        <a href="/" class="btn btn-info btn-fill btn-sm">
+                                        <a href="{{ route('showTaskDetail',['task'=>$task->match_id]) }}"
+                                            class="btn btn-info btn-fill btn-sm">
                                             View Details
                                         </a>
                                     </td>
@@ -30,6 +31,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $tasks->links() }}
                 </div>
             </div>
         </div>
