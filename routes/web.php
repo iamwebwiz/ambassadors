@@ -51,6 +51,11 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
         Route::get('new', 'PublicationsController@showNewPublicationForm');
         Route::post('new', 'PublicationsController@addNewPublication')->name('addNewPublication');
     });
+
+    // Tasks
+    Route::group(['prefix' => 'tasks'], function() {
+        Route::get('/', 'TasksController@index')->name('publisher.tasks');
+    });
 });
 
 // Routes for Admin

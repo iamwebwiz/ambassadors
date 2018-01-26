@@ -80,16 +80,16 @@
                         </li>
                     @endrole
                     @role('publisher')
+                        <li id="tasks">
+                            <a href="{{ route('publisher.tasks') }}">
+                                <i class="fa fa-tasks"></i>
+                                <p>Tasks</p>
+                            </a>
+                        </li>
                         <li id="publications">
                             <a href="{{ url('publisher/publications') }}">
                                 <i class="ti-layout-grid2"></i>
                                 <p>My Publications</p>
-                            </a>
-                        </li>
-                        <li id="new-publication">
-                            <a href="{{ url('publisher/publications/new') }}">
-                                <i class="fa fa-plus"></i>
-                                <p>New Publication</p>
                             </a>
                         </li>
                     @endrole

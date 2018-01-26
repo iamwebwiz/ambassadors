@@ -18,16 +18,15 @@ class PublicationsController extends Controller
     {
         // Fetch all publications from database
         $data['publications'] = Publication::paginate(30);
-
-        // Pass data to view
         $data['title'] = "My Publications";
-        return view('publisher/publications/index', $data);
+
+        return view('publisher.publications.index', $data);
     }
 
     public function showNewPublicationForm()
     {
         // Return new publication form view
-        return view('publisher/publications/new');
+        return view('publisher.publications.new');
     }
 
     public function addNewPublication(Request $request)
