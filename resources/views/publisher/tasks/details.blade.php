@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-primary">Task Details</h1>
+            <h1 class="text-primary page-header">Task Details</h1>
             <div class="panel panel-primary">
                 <div class="panel-body">
                     {{--  --}}
