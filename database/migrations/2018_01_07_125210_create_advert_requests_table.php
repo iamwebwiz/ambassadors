@@ -17,8 +17,10 @@ class CreateAdvertRequestsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('body')->default('Lorem ipsum dolor sit amet, consectetur adipisicing.');
-            $table->integer('user_id')->unsigned();
             $table->integer('company_id')->unsigned();
+            $table->enum('status', ['Pending', 'Matched', 'Processing', 'Finished'])
+                  ->default('Pending');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }

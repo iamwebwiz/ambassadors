@@ -49,9 +49,10 @@
                                 </div>
                             </form>
                             {{-- <hr> --}}
-                            <button class="btn btn-success btn-fill btn-block">
-                                View Reports
-                            </button>
+                            <a class="btn btn-success btn-fill btn-block"
+                            href="{{ route('showTaskPublications',['task'=>$task->match_id]) }}">
+                                View Publications &amp; Reports
+                            </a>
                         </div>
                     </div>
 

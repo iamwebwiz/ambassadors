@@ -18,7 +18,8 @@ class CreatePublicationsTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->integer('company_id')->default(1);
-            $table->unsignedInteger('user_id');
+            $table->integer('advert_request_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }

@@ -42,4 +42,14 @@ class TasksController extends Controller
         $advert->save();
         return back();
     }
+
+    public function showTaskPublications($taskID) {
+        $task = Matching::where('match_id', $taskID)->first();
+        $advert = $task->advertRequest;
+
+        $this->data['task'] = $task;
+        $this->data['advert'] = $advert;
+
+        return view('publisher.tasks.reports', $this->data);
+    }
 }

@@ -57,6 +57,7 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
         Route::get('/', 'TasksController@index')->name('publisher.tasks');
         Route::get('{task}/detail', 'TasksController@showTaskDetail')->name('showTaskDetail');
         Route::post('{task}/detail', 'TasksController@changeTaskStatus')->name('changeTaskStatus');
+        Route::get('{task}/detail/reports', 'TasksController@showTaskPublications')->name('showTaskPublications');
     });
 });
 

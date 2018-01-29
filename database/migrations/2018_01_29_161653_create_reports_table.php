@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddStatusToAdvertRequests extends Migration
+class CreateReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class AddStatusToAdvertRequests extends Migration
      */
     public function up()
     {
-        Schema::table('advert_requests', function(Blueprint $table) {
-            $table->enum('status', ['Pending', 'Matched', 'Processing', 'Finished'])
-                  ->default('Pending')
-                  ->before('created_at');
+        Schema::create('reports', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('filepath');
+            $table->integer('publication_id')->unsigned();
+            $table->timestamps();
         });
     }
 
@@ -27,6 +28,6 @@ class AddStatusToAdvertRequests extends Migration
      */
     public function down()
     {
-        $table->dropColumn('status');
+        Schema::dropIfExists('reports');
     }
 }

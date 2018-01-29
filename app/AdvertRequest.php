@@ -20,4 +20,9 @@ class AdvertRequest extends Model
     {
         return $this->hasOne(Matching::class);
     }
+
+    public function publications()
+    {
+        return $this->hasMany(Publication::class);
+    }
 }
