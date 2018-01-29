@@ -17,8 +17,10 @@ class TasksController extends Controller
     }
 
     public function index() {
+        $user = Auth::user();
         $this->data['title'] = "My Tasks";
-        $this->data['tasks'] = Matching::where('user_id', Auth::id())->paginate(20);
+        // $this->data['tasks'] = Matching::where('user_id', Auth::id())->paginate(20);
+        $this->data['tasks'] = $user->matchings()->paginate(20);
 
         return view('publisher.tasks.index', $this->data);
     }
@@ -28,6 +30,7 @@ class TasksController extends Controller
         $advert_title = $task->advertRequest->title;
         $this->data['title'] = "Details for ".ucfirst($advert_title);
         $this->data['task'] = $task;
+        $this->data['advert_title'] = $advert_title;
 
         return view('publisher.tasks.details', $this->data);
     }
