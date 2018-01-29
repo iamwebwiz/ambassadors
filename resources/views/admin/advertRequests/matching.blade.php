@@ -45,7 +45,7 @@
                                     </td>
                                 </tr>
                             @empty
-                                Nothing to display here yet.
+                                No publisher to display here yet.
                             @endforelse
                         </tbody>
                     </table>
