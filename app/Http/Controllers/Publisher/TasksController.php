@@ -34,4 +34,12 @@ class TasksController extends Controller
 
         return view('publisher.tasks.details', $this->data);
     }
+
+    public function changeTaskStatus(Request $request, $taskID) {
+        $task = Matching::where('match_id', $taskID)->first();
+        $advert = $task->advertRequest;
+        $advert->status = $request->task_status;
+        $advert->save();
+        return back();
+    }
 }

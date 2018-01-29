@@ -5,9 +5,9 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="text-primary">My Tasks</h1>
-            <div class="panel panel-primary">
+            <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table table-striped table-full-width">
+                    <table class="table table-striped">
                         <thead>
                             <th>#</th>
                             <th>Title</th>
@@ -16,7 +16,7 @@
                             <th>Date Assigned</th>
                         </thead>
                         <tbody>
-                            @foreach ($tasks as $task)
+                            @forelse ($tasks as $task)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ ucfirst($task->advertRequest->title) }}</td>
@@ -30,7 +30,9 @@
                                         </a>
                                     </td>
                                 </tr>
-                            @endforeach
+                            @empty
+                                {{ title_case("you have not been given any task yet.") }}
+                            @endforelse
                         </tbody>
                     </table>
                     {{ $tasks->links() }}
