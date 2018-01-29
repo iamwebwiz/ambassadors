@@ -38,7 +38,7 @@
                             <th>Joined</th>
                         </thead>
                         <tbody>
-                            @foreach ($clients as $client)
+                            @forelse ($clients as $client)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ title_case($client->name) }}</td>
@@ -58,7 +58,9 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
+                            @empty
+                                Nothing to show yet.
+                            @endforelse
                         </tbody>
                     </table>
                 {{-- </div> --}}

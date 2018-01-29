@@ -81,7 +81,7 @@
                         </table>
                         {{ $requests->links() }}
                     @else
-                        <h1 class="text-center text-primary">No Requests Made At This Moment</h1>
+                        <h3 class="text-center text-info">No Requests Made At This Moment</h3>
                     @endif
                 </div>
             </div>

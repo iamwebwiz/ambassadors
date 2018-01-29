@@ -38,7 +38,7 @@
                             <th>Joined</th>
                         </thead>
                         <tbody>
-                            @foreach ($publishers as $publisher)
+                            @forelse ($publishers as $publisher)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ title_case($publisher->name) }}</td>
@@ -58,7 +58,9 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
+                            @empty
+                                Nothing to show yet.
+                            @endforelse
                         </tbody>
                     </table>
                 {{-- </div> --}}

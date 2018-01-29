@@ -58,7 +58,7 @@
                         </table>
                         {{ $companies->links() }}
                     @else
-                        <h2 class="text-primary text-center">No Companies Registered Yet</h2>
+                        <h3 class="text-info text-center">No Companies Registered Yet</h3>
                     @endif
                 </div>
             </div>
