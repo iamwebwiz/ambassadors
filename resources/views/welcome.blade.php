@@ -66,6 +66,7 @@
                             <li><a href="#project">Projects</a></li>
                             <li><a href="#news">News</a></li>
                             <li><a href="#contact">Contact</a></li>
+                            <li><a href="{{ url('login') }}">Login</a></li>
                             <li class="last"><a href="{{ url('register') }}">Signup</a></li>
                             <!--li><a href="#features">Features</a></li-->
                         </ul>
