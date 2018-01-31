@@ -46,10 +46,12 @@ class TasksController extends Controller
     public function showTaskPublications($taskID) {
         $task = Matching::where('match_id', $taskID)->first();
         $advert = $task->advertRequest;
+        $publications = $advert->publications;
 
         $this->data['task'] = $task;
         $this->data['advert'] = $advert;
+        $this->data['publications'] = $publications;
 
-        return view('publisher.tasks.reports', $this->data);
+        return view('publisher.tasks.publications', $this->data);
     }
 }
