@@ -62,7 +62,7 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
 });
 
 // Routes for Admin
-Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'],
+Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'role:admin'],
     'namespace' => 'Admin'], function() {
     Route::get('dashboard', 'HomeController@index')->name('admin.dash');
 

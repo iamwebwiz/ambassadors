@@ -48,13 +48,13 @@
                     </a>
                     <ul class="treeview-menu">
                         <li id="clients">
-                            <a href="{{ url('admin/users/clients') }}">
+                            <a href="{{ url('administrator/users/clients') }}">
                                 <i class="fa fa-briefcase"></i>
                                 <span>Clients</span>
                             </a>
                         </li>
                         <li id="publishers">
-                            <a href="{{ url('admin/users/publishers') }}">
+                            <a href="{{ url('administrator/users/publishers') }}">
                                 <i class="fa fa-user-secret"></i>
                                 <span>Publishers</span>
                             </a>
@@ -63,14 +63,14 @@
                 </li>
 
                 <li id="companies">
-                    <a href="{{ url('admin/companies') }}">
+                    <a href="{{ url('administrator/companies') }}">
                         <i class="fa fa-building-o"></i>
                         <span>Companies</span>
                     </a>
                 </li>
 
                 <li id="advertRequests">
-                    <a href="{{ url('admin/advert-requests') }}">
+                    <a href="{{ url('administrator/advert-requests') }}">
                         <i class="fa fa-question"></i>
                         <span>Advert Requests</span>
                     </a>

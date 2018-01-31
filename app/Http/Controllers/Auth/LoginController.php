@@ -45,7 +45,7 @@ class LoginController extends Controller
         } else if (Auth::user()->hasRole('publisher')) {
             return 'publisher';
         } else if (Auth::user()->hasRole('admin')) {
-            return 'admin/dashboard';
+            return 'administrator/dashboard';
         } else {
             //
         }
