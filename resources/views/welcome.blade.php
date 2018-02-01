@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <title>DGAmbassadors | Digital Ambassadors | Soft Work</title>
+        <title>DGAmbassadors &bull; Digital Ambassadors &bull; Soft Work</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
