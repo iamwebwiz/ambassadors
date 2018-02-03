@@ -52,4 +52,11 @@ class UsersController extends Controller
         $publisher->attachRole($role);
         return back();
     }
+
+    public function delete($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+        return back();
+    }
 }

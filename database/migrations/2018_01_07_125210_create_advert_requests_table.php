@@ -16,7 +16,7 @@ class CreateAdvertRequestsTable extends Migration
         Schema::create('advert_requests', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('body')->default('Lorem ipsum dolor sit amet, consectetur adipisicing.');
+            $table->text('body');
             $table->integer('company_id')->unsigned();
             $table->enum('status', ['Pending', 'Matched', 'Processing', 'Finished'])
                   ->default('Pending');

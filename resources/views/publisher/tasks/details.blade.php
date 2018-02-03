@@ -51,7 +51,7 @@
                             {{-- <hr> --}}
                             <a class="btn btn-success btn-fill btn-block"
                             href="{{ route('showTaskPublications',['task'=>$task->match_id]) }}">
-                                View Publications &amp; Reports
+                                Publications &amp; Reports
                             </a>
                         </div>
                     </div>

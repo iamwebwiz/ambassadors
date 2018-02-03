@@ -80,4 +80,23 @@ class RegisterController extends Controller
 
         return $user;
     }
+
+    public function redirectTo()
+    {
+        if (auth()->user()->hasRole('client')) {
+            return 'client';
+        }
+
+        else if (auth()->user()->hasRole('publisher')) {
+            return 'publisher';
+        }
+
+        else if (auth()->user()->hasRole('admin')) {
+            return 'administrator/dashboard';
+        }
+
+        else {
+            //
+        }
+    }
 }

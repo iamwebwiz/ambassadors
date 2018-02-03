@@ -57,7 +57,7 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
         Route::get('/', 'TasksController@index')->name('publisher.tasks');
         Route::get('{task}/detail', 'TasksController@showTaskDetail')->name('showTaskDetail');
         Route::post('{task}/detail', 'TasksController@changeTaskStatus')->name('changeTaskStatus');
-        Route::get('{task}/detail/reports', 'TasksController@showTaskPublications')->name('showTaskPublications');
+        Route::get('{task}/detail/publications', 'TasksController@showTaskPublications')->name('showTaskPublications');
     });
 });
 
@@ -73,10 +73,15 @@ Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'role:admin'
     });
 
     Route::group(['prefix' => 'users'], function() {
+        // Clients
         Route::get('clients', 'HomeController@showAllClients');
         Route::post('clients', 'UsersController@addNewClient')->name('addNewClient');
+        Route::get('clients/{id}/delete', 'UsersController@delete')->name('deleteClient');
+
+        // Publishers
         Route::get('publishers', 'HomeController@showAllPublishers');
         Route::post('publishers', 'UsersController@addNewPublisher')->name('addNewPublisher');
+        Route::get('publishers/{id}/delete', 'UsersController@delete')->name('deletePublisher');
     });
 
     Route::get('companies', 'CompaniesController@index');

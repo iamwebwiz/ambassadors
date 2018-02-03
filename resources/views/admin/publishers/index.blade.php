@@ -53,7 +53,7 @@
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Edit</a></li>
-                                                <li><a href="#" id="deletePublisher">Delete</a></li>
+                                                <li><a href="{{ route('deletePublisher',['id'=>$publisher->id]) }}" id="deletePublisher">Delete</a></li>
                                             </ul>
                                         </div>
                                     </td>
