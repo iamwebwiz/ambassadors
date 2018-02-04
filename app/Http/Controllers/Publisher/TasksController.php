@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Publisher;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Publisher\NewPublication;
 use App\Matching;
+use App\Publication;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TasksController extends Controller
 {
@@ -48,10 +51,45 @@ class TasksController extends Controller
         $advert = $task->advertRequest;
         $publications = $advert->publications;
 
-        $this->data['task'] = $task;
-        $this->data['advert'] = $advert;
-        $this->data['publications'] = $publications;
+        $this->data = [
+            'task' => $task,
+            'advert' => $advert,
+            'publications' => $publications
+        ];
 
         return view('publisher.tasks.publications', $this->data);
+    }
+
+    public function makeNewPublication($taskID)
+    {
+        $task = Matching::where('match_id', $taskID)->first();
+        $advert = $task->advertRequest;
+
+        $this->data = [
+            'task' => $task,
+            'advert' => $advert
+        ];
+
+        return view('publisher.publications.new', $this->data);
+    }
+
+    public function addNewPublication(NewPublication $request, $taskID)
+    {
+        $user = Auth::user();
+        $task = Matching::where('match_id', $taskID)->first();
+        $advert = $task->advertRequest;
+        $company = DB::table('companies')->where('name', $request->company)->first();
+
+        $publication = new Publication;
+        $publication->title = $request->title;
+        $publication->description = $request->description;
+        $publication->company_id = $company->id;
+        $publication->advert_request_id = $advert->id;
+
+        if ($user->publications()->save($publication)) {
+            return redirect()->route('showTaskPublications', ['task' => $taskID]);
+        }
+
+        return back();
     }
 }

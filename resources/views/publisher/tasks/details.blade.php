@@ -27,13 +27,13 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-9">
-                            <h5>Title: <em>{{ ucfirst($advert_title) }}</em></h5>
-                            <h5>Company: <em>{{ ucfirst($task->advertRequest->company->name) }}</em></h5>
-                            <h5>Client: <em>{{ title_case($task->advertRequest->company->user->name) }}</em></h5>
-                            <h5>Date Assigned: <em>{{ $task->created_at->format('l, d M Y') }}</em></h5>
+                            <h5>Title: <strong>{{ ucfirst($advert_title) }}</strong></h5>
+                            <h5>Company: <strong>{{ ucfirst($task->advertRequest->company->name) }}</strong></h5>
+                            <h5>Client: <strong>{{ title_case($task->advertRequest->company->user->name) }}</strong></h5>
+                            <h5>Date Assigned: <strong>{{ $task->created_at->format('l, d M Y') }}</strong></h5>
                         </div>
                         <div class="col-sm-3">
-                            <h5>Task Status: <em>{{ $task->advertRequest->status }}</em></h5>
+                            <h5>Task Status: <strong>{{ $task->advertRequest->status }}</strong></h5>
 
                             <form action="{{ route('changeTaskStatus',['task'=>$task->match_id]) }}" method="post">
                                 {{ csrf_field() }}

@@ -24,7 +24,8 @@ class NewPublication extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|string|min:10',
+            'description' => 'required'
         ];
     }
 }

@@ -48,8 +48,6 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
     // Publications
     Route::group(['prefix' => 'publications'], function() {
         Route::get('/', 'PublicationsController@index')->name('publications');
-        Route::get('new', 'PublicationsController@showNewPublicationForm');
-        Route::post('new', 'PublicationsController@addNewPublication')->name('addNewPublication');
     });
 
     // Tasks
@@ -57,7 +55,12 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
         Route::get('/', 'TasksController@index')->name('publisher.tasks');
         Route::get('{task}/detail', 'TasksController@showTaskDetail')->name('showTaskDetail');
         Route::post('{task}/detail', 'TasksController@changeTaskStatus')->name('changeTaskStatus');
-        Route::get('{task}/detail/publications', 'TasksController@showTaskPublications')->name('showTaskPublications');
+        Route::get('{task}/detail/publications', 'TasksController@showTaskPublications')
+            ->name('showTaskPublications');
+        Route::get('{task}/detail/publications/new', 'TasksController@makeNewPublication')
+            ->name('makeNewPublication');
+        Route::post('{task}/detail/publications/new', 'TasksController@addNewPublication')
+            ->name('addNewPublication');
     });
 });
 
