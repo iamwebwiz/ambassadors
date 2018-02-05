@@ -11,13 +11,13 @@ class Publication extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function reports()
-    {
-        return $this->hasMany(Report::class);
-    }
-
     public function advertRequest()
     {
         return $this->belongsTo(AdvertRequest::class);
+    }
+
+    public function reports()
+    {
+        return $this->hasMany(Report::class);
     }
 }

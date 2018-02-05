@@ -2,6 +2,13 @@
 
 @section('body')
 
+    <style>
+        #tableHeading {
+            background: #66615b;
+            color: #fff;
+        }
+    </style>
+
     <div class="row">
         <div class="col-md-12">
             <h2 class="text-primary">{{ ucfirst($advert->title) }} (Publications)</h2>
@@ -10,7 +17,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="pull-right">
-                                <a href="{{ route('makeNewPublication',['task'=>$task->match_id]) }}" class="btn btn-primary btn-fill">
+                                <a href="{{ route('makeNewPublication',['task'=>$task->match_id]) }}"
+                                    class="btn btn-default btn-fill">
                                     New Publication
                                 </a>
                             </div>
@@ -18,15 +26,16 @@
                     </div>
                     <hr>
                     @if ($publications->count() > 0)
-                        <table class="table table-hover">
-                            <thead>
-                                <th>Title</th>
-                                <th>Content</th>
-                                <th>Date Added</th>
+                        <table class="table table-hover table-bordered">
+                            <thead id="tableHeading">
+                                <th class="text-center">Title</th>
+                                <th class="text-center">Content</th>
+                                <th class="text-center">Date Added</th>
+                                <th></th>
                             </thead>
                             <tbody>
                                 @foreach($publications as $publication)
-                                    <tr>
+                                    <tr class="text-center">
                                         <td>{{ $publication->title }}</td>
                                         <td>{!! $publication->description !!}</td>
                                         <td>{{ $publication->created_at->format('d/m/Y') }}</td>
@@ -45,37 +54,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="modal fade" id="modal-default" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">New Publication for {{ $advert->title }}</h4>
-          </div>
-          <div class="modal-body">
-            <form action="/" role="form" method="post">
-                {{ csrf_field() }}
-                <div class="form-group">
-                    <label>Title</label>
-                    <input type="text" name="title" placeholder="Title" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Description</label>
-                    <textarea name="description" rows="5" class="form-control" placeholder="Description"></textarea>
-                </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save Publication</button>
-            </form>
-          </div>
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog -->
     </div>
 
     <script>

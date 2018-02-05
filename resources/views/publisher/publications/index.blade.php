@@ -8,11 +8,11 @@
             <div class="card">
                 <div class="content">
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover">
+                        <table class="table table-hover table-hover">
                             <thead>
                                 <th>#</th>
                                 <th>Title</th>
-                                <th>Description</th>
+                                <th>Content</th>
                                 <th>Client</th>
                                 <th>Date Added</th>
                             </thead>
@@ -22,7 +22,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $publication->title }}</td>
                                         <td>{{ $publication->description }}</td>
-                                        <td>{{ $publication->company_id }}</td>
+                                        <td>{{ $publication->advertRequest->user->name }}</td>
                                         <td>{{ $publication->created_at->format('d/m/Y') }}</td>
                                     </tr>
                                 @empty

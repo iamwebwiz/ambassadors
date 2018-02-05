@@ -38,7 +38,7 @@
                             class="form-control">{{ old('description') }}</textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-fill">
+                            <button type="submit" class="btn btn-default btn-lg btn-fill">
                                 Add Publication
                             </button>
                         </div>
