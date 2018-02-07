@@ -23,17 +23,11 @@
     <!--  Paper Dashboard core CSS    -->
     <link href="{{ asset('css/paper-dashboard.css') }}" rel="stylesheet"/>
 
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{{ asset('css/demo.css') }}" rel="stylesheet" />
-
     <!--  Fonts and icons     -->
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <link href="{{ asset('css/themify-icons.css') }}" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <link href="{{ asset('css/themify-icons.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-
-    <!-- JQuery -->
-    <script src="{{ asset('js/jquery-1.10.2.js') }}" type="text/javascript"></script>
 
 </head>
 <body>
@@ -166,6 +160,9 @@
         </div>
     </div>
 
+    <!-- JQuery -->
+    <script src="{{ asset('js/jquery-1.10.2.js') }}" type="text/javascript"></script>
+
     <!--   Core JS Files   -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
@@ -175,14 +172,8 @@
     <!--  Charts Plugin -->
     <script src="{{ asset('js/chartist.min.js') }}"></script>
 
-    <!--  Notifications Plugin    -->
-    <script src="{{ asset('js/bootstrap-notify.js') }}"></script>
-
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
     <script src="{{ asset('js/paper-dashboard.js') }}"></script>
-
-    <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-    <script src="{{ asset('js/demo.js') }}"></script>
 
 </body>
 

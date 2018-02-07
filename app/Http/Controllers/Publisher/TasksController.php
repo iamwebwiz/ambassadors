@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Publisher;
 
+use App\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Publisher\NewPublication;
 use App\Matching;
@@ -78,7 +79,7 @@ class TasksController extends Controller
         $user = Auth::user();
         $task = Matching::where('match_id', $taskID)->first();
         $advert = $task->advertRequest;
-        $company = DB::table('companies')->where('name', $request->company)->first();
+        $company = Company::where('name', $request->company)->first();
 
         $publication = new Publication;
         $publication->title = $request->title;
