@@ -6,7 +6,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ isset($title) ? $title." :: DGAmbassadors Admin" : "DGAmbassadors Admin" }}</title>
 
@@ -32,11 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-    <!-- jQuery 3 -->
-    <script src="{{ asset('admin/jquery/dist/jquery.min.js') }}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <!--
 BODY TAG OPTIONS:

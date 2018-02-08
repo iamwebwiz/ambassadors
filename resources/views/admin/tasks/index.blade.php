@@ -59,6 +59,9 @@
     </div>
     <!-- /.content-wrapper -->
 
+@stop
+
+@section('script')
     <script>
         $("#tasks").addClass("active");
 
@@ -73,5 +76,4 @@
             }
         });
     </script>
-
 @stop

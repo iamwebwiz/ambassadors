@@ -69,8 +69,10 @@
     </div>
     <!-- /.content-wrapper -->
 
+@stop
+
+@section('script')
     <script>
         $('#companies').addClass('active');
     </script>
-
 @stop

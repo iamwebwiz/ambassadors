@@ -59,8 +59,10 @@
     </div>
     <!-- /.content-wrapper -->
 
+@stop
+
+@section('script')
     <script>
         $("#advertRequests").addClass("active");
     </script>
-
 @stop

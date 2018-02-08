@@ -30,8 +30,10 @@
     </div>
     <!-- /.content-wrapper -->
 
+@stop
+
+@section('script')
     <script>
         $('#dashboard').addClass('active');
     </script>
-
 @stop

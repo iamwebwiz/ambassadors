@@ -108,6 +108,9 @@
       <!-- /.modal-dialog -->
     </div>
 
+@stop
+
+@section('script')
     <script>
         $('#users, #publishers').addClass('active');
 
@@ -120,5 +123,4 @@
             }
         });
     </script>
-
 @stop

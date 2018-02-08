@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('img/favicon.png') }}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -24,7 +23,7 @@
     <link href="{{ asset('css/paper-dashboard.css') }}" rel="stylesheet"/>
 
     <!--  Fonts and icons     -->
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
     <link href="{{ asset('css/themify-icons.css') }}" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
@@ -165,12 +164,6 @@
 
     <!--   Core JS Files   -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-
-    <!--  Checkbox, Radio & Switch Plugins -->
-    <script src="{{ asset('js/bootstrap-checkbox-radio.js') }}"></script>
-
-    <!--  Charts Plugin -->
-    <script src="{{ asset('js/chartist.min.js') }}"></script>
 
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
     <script src="{{ asset('js/paper-dashboard.js') }}"></script>

@@ -12,8 +12,14 @@
 
 <!-- REQUIRED JS SCRIPTS -->
 
+<!-- jQuery 3 -->
+<script src="{{ asset('assets/jquery/jquery.min.js') }}"></script>
+
+@yield('script')
+
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ asset('admin/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
 <!-- AdminLTE App -->
 <script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
 
