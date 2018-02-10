@@ -168,6 +168,8 @@
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
     <script src="{{ asset('js/paper-dashboard.js') }}"></script>
 
+    @yield('script')
+
 </body>
 
 </html>

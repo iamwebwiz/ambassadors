@@ -24,18 +24,4 @@ class PublicationsController extends Controller
 
         return view('publisher.publications.index', $data);
     }
-
-    public function showNewPublicationForm()
-    {
-        // Return new publication form view
-        return view('publisher.publications.new');
-    }
-
-    public function addNewPublication(Request $request)
-    {
-        // Validate the request
-
-        // Create a new publication
-        $publication = new Publication;
-    }
 }

@@ -46,8 +46,10 @@
         </div>
     </div>
 
-    <script>
-        $('#companies').addClass('active');
-    </script>
+@endsection
 
+@section('script')
+<script>
+    $('#companies').addClass('active');
+</script>
 @endsection

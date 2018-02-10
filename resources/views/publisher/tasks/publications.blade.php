@@ -40,7 +40,8 @@
                                         <td>{!! $publication->description !!}</td>
                                         <td>{{ $publication->created_at->format('d/m/Y') }}</td>
                                         <td>
-                                            <a href="" class="btn btn-sm btn-default btn-fill">
+                                            <a href="{{ route('showPublicationReports',['task'=>$task->match_id, 'id'=>$publication->id]) }}"
+                                                class="btn btn-sm btn-default btn-fill">
                                                 Reports
                                             </a>
                                         </td>
@@ -56,8 +57,10 @@
         </div>
     </div>
 
-    <script>
-        $('#tasks').addClass('active');
-    </script>
+@endsection
 
+@section('script')
+<script>
+    $('#tasks').addClass('active');
+</script>
 @endsection

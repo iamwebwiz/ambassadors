@@ -105,8 +105,10 @@
         </div>
     </div>
 
+@endsection
+
+@section('script')
     <script>
         $('#dashboard').addClass('active');
     </script>
-
 @endsection

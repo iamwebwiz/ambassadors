@@ -47,8 +47,10 @@
         </div>
     </div>
 
-    <script>
-        $('#publications').addClass('active');
-    </script>
+@endsection
 
+@section('script')
+<script>
+    $('#publications').addClass('active');
+</script>
 @endsection

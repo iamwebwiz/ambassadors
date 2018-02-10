@@ -65,8 +65,10 @@
         </div>
     </div>
 
-    <script>
-        $('#tasks').addClass('active');
-    </script>
+@endsection
 
+@section('script')
+<script>
+    $('#tasks').addClass('active');
+</script>
 @endsection

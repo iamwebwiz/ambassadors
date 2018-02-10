@@ -83,6 +83,7 @@ class TasksController extends Controller
 
         $publication = new Publication;
         $publication->title = $request->title;
+        $publication->slug = str_slug($request->title, $separator = '-');
         $publication->description = $request->description;
         $publication->company_id = $company->id;
         $publication->advert_request_id = $advert->id;
