@@ -26,7 +26,6 @@
                     @if (count($publications) > 0)
                         <table class="table table-striped table-hover">
                             <thead>
-                                <th>#</th>
                                 <th>Title</th>
                                 <th>URL</th>
                                 <th></th>
@@ -34,18 +33,20 @@
                             <tbody>
                                 @foreach ($publications as $publication)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
                                         <td>{{ $publication->title }}</td>
                                         <td>
                                             <a href="{{ $publication->description }}" target="_blank">
                                                 {{ $publication->description }}
                                             </a>
                                         </td>
-                                        <td><a href="" class="btn btn-link">Reports</a></td>
+                                        <td>
+                                            <a href="{{ route('getPublicationReports',['advert'=>$advert->id,'id'=>$publication->id]) }}"
+                                                class="btn btn-link">Reports</a>
+                                        </td>
                                         <td>
                                             <a href="{{ route('deletePublication',['id'=>$advert->id,'publication'=>$publication->id]) }}"
-                                                class="btn btn-link delete">
-                                                <i class="glyphicon glyphicon-trash"></i>
+                                                class="btn btn-danger delete">
+                                                <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
                                     </tr>

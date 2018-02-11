@@ -55,4 +55,18 @@ class AdvertRequestsController extends Controller
         Publication::findOrFail($publicationID)->delete();
         return back();
     }
+
+    public function getPublicationReports($advertID, $id)
+    {
+        $advert = AdvertRequest::findOrFail($advertID);
+        $publication = Publication::findOrFail($id);
+        $reports = $publication->reports;
+
+        $data['title'] = "Reports for {$publication->title}";
+        $data['advert'] = $advert;
+        $data['publication'] = $publication;
+        $data['reports'] = $reports;
+
+        return view('admin.advertRequests.publications.reports.index', $data)->render();
+    }
 }

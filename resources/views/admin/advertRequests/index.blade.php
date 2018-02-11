@@ -68,9 +68,10 @@
                                                 </a>
                                             </td>
                                         @endif
-                                        @if ($advert->status == "Processing")
+                                        @if ($advert->status == "Processing" OR $advert->status == "Finished")
                                             <td>
-                                                <a href="{{ route('getAdvertPublications',['id'=>$advert->id]) }}" class="btn btn-sm btn-default">
+                                                <a href="{{ route('getAdvertPublications',['id'=>$advert->id]) }}"
+                                                    class="btn btn-sm btn-default">
                                                     View Work Progress
                                                 </a>
                                             </td>
