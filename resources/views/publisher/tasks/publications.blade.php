@@ -29,7 +29,7 @@
                         <table class="table table-hover table-bordered">
                             <thead id="tableHeading">
                                 <th class="text-center">Title</th>
-                                <th class="text-center">Content</th>
+                                <th class="text-center">URL</th>
                                 <th class="text-center">Date Added</th>
                                 <th></th>
                             </thead>
@@ -37,7 +37,11 @@
                                 @foreach($publications as $publication)
                                     <tr class="text-center">
                                         <td>{{ $publication->title }}</td>
-                                        <td>{!! $publication->description !!}</td>
+                                        <td>
+                                            <a href="{{ $publication->description }}" target="_blank">
+                                                {{ $publication->description }}
+                                            </a>
+                                        </td>
                                         <td>{{ $publication->created_at->format('d/m/Y') }}</td>
                                         <td>
                                             <a href="{{ route('showPublicationReports',['task'=>$task->match_id, 'id'=>$publication->id]) }}"

@@ -12,7 +12,7 @@
                             <thead>
                                 <th>#</th>
                                 <th>Title</th>
-                                <th>Content</th>
+                                <th>URL</th>
                                 <th>Client</th>
                                 <th>Date Added</th>
                             </thead>
@@ -21,12 +21,16 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $publication->title }}</td>
-                                        <td>{{ $publication->description }}</td>
+                                        <td>
+                                            <a href="{{ $publication->description }}" target="_blank">
+                                                {{ $publication->description }}
+                                            </a>
+                                        </td>
                                         <td>{{ $publication->advertRequest->user->name }}</td>
                                         <td>{{ $publication->created_at->format('d/m/Y') }}</td>
                                     </tr>
                                 @empty
-                                    YOU ARE YET TO PUBLISH ANYTHING
+                                    You have not published anything at this time.
                                 @endforelse
                             </tbody>
                         </table>

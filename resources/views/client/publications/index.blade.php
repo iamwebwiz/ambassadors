@@ -4,13 +4,13 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h1>My Publications</h1>
+            <h1>My Adverts</h1>
             <div class="card">
                 <div class="content">
                     <div class="row">
                         <div class="col-sm-12">
                             <a href="{{ route('client.newPublication') }}" class="pull-right btn btn-primary">
-                                New Publication
+                                New Advert Request
                             </a>
                         </div>
                     </div>

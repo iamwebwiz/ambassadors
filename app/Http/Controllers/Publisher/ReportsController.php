@@ -21,8 +21,50 @@ class ReportsController extends Controller
         $task = Matching::where('match_id', $taskID)->firstOrFail();
         $publication = Publication::findOrFail($publicationID);
         $data['title'] = "Publication Reports";
+        $data['task'] = $task;
+        $data['publication'] = $publication;
         $data['reports'] = $publication->reports;
 
         return view('publisher.reports.index', $data);
+    }
+
+    public function create($taskID, $publicationID)
+    {
+        $task = Matching::where('match_id', $taskID)->firstOrFail();
+        $publication = Publication::findOrFail($publicationID);
+        $data['title'] = "New Report";
+        $data['task'] = $task;
+        $data['publication'] = $publication;
+
+        return view('publisher.reports.new', $data);
+    }
+
+    public function store(Request $request, $taskID, $publicationID)
+    {
+        $this->validate($request, [
+            'image' => 'required|image|max:10240'
+        ]);
+
+        $task = Matching::where('match_id', $taskID)->firstOrFail();
+        $publication = Publication::findOrFail($publicationID);
+        $company = $publication->advertRequest->company;
+
+        $report = new Report;
+
+        if (!is_null($request->image)) {
+            $company_name = $company->name;
+            $publication_slug = $publication->slug;
+            $file_path = $request->file('image')->store($company_name.'/publications/'.$publication_slug.'/reports', 'public');
+            $report->filepath = $file_path;
+        }
+
+        if ($publication->reports()->save($report)) {
+            return redirect()->route('showPublicationReports', [
+                'task' => $taskID,
+                'id' => $publicationID
+            ]);
+        } else {
+            return back();
+        }
     }
 }

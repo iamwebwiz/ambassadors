@@ -17,7 +17,7 @@ class CreatePublicationsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug');
-            $table->text('description')->nullable();
+            $table->string('description');
             $table->integer('company_id')->unsigned();
             $table->integer('advert_request_id')->unsigned();
             $table->integer('user_id')->unsigned();

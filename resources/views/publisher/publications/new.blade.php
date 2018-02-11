@@ -33,9 +33,9 @@
                             value="{{ old('title') }}">
                         </div>
                         <div class="form-group">
-                            <label>Content</label>
-                            <textarea name="description" rows="5" placeholder="Content"
-                            class="form-control">{{ old('description') }}</textarea>
+                            <label>URL <small>(This is to be copied from the publication made)</small></label>
+                            <input type="text" name="description" placeholder="URL" class="form-control"
+                            value="{{ old('description') }}">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-default btn-lg btn-fill">

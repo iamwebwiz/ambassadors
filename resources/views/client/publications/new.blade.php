@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h2>New Publication Request</h2>
+            <h2>New Advert Request</h2>
             <div class="card">
                 <div class="content">
                     <div class="row">

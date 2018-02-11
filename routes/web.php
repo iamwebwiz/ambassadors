@@ -66,7 +66,9 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
             ->name('showTaskPublications');
 
         // Task Publication Reports
-        Route::get('{task}/detail/publications/{slug}/reports', 'ReportsController@index')->name('showPublicationReports');
+        Route::get('{task}/detail/publications/{id}/reports', 'ReportsController@index')->name('showPublicationReports');
+        Route::get('{task}/detail/publications/{id}/reports/new', 'ReportsController@create')->name('newReportForm');
+        Route::post('{task}/detail/publications/{id}/reports/new', 'ReportsController@store')->name('addNewReport');
 
         // New Publication for task
         Route::get('{task}/detail/publications/new', 'TasksController@makeNewPublication')
