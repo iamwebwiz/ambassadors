@@ -70,7 +70,7 @@
                                         @endif
                                         @if ($advert->status == "Processing")
                                             <td>
-                                                <a href="/" class="btn btn-sm btn-default">
+                                                <a href="{{ route('getAdvertPublications',['id'=>$advert->id]) }}" class="btn btn-sm btn-default">
                                                     View Work Progress
                                                 </a>
                                             </td>

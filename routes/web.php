@@ -85,6 +85,10 @@ Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'role:admin'
 
     Route::group(['prefix' => 'advert-requests'], function() {
         Route::get('/', 'AdvertRequestsController@index')->name('admin.advertRequests');
+        // Advert Publications
+        Route::get('{id}/publications', 'AdvertRequestsController@getAdvertPublications')->name('getAdvertPublications');
+        // Delete Publication
+        Route::get('{id}/publications/{publication}/delete', 'AdvertRequestsController@deletePublication')->name('deletePublication');
         Route::get('{advert}/match', 'AdvertRequestsController@showPublishers')->name('matchAdvertToPublisher');
         Route::post('{advert}/match/{publisher}', 'TasksController@doMatching')->name('doMatching');
     });

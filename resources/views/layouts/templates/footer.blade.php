@@ -15,13 +15,13 @@
 <!-- jQuery 3 -->
 <script src="{{ asset('assets/jquery/jquery.min.js') }}"></script>
 
-@yield('script')
-
 <!-- Bootstrap 3.3.7 -->
-<script src="{{ asset('admin/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
 <!-- AdminLTE App -->
-<script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
+
+@yield('script')
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
