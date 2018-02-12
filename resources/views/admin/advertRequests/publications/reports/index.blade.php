@@ -38,7 +38,7 @@
                                             <img src="{{ Storage::url($report->filepath) }}" class="img-thumbnail"
                                             alt="" width="80px">
                                         </td>
-                                        <td>{{ $report->created_at->format('l, d M Y') }}</td>
+                                        <td>{{ $report->created_at->format('jS F Y') }}</td>
                                         <td>
                                             <a href="{{ Storage::url($report->filepath) }}" target="_blank"
                                                 class="btn btn-primary">

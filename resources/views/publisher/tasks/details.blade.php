@@ -30,7 +30,7 @@
                             <h5>Title: <strong>{{ ucfirst($advert_title) }}</strong></h5>
                             <h5>Company: <strong>{{ ucfirst($task->advertRequest->company->name) }}</strong></h5>
                             <h5>Client: <strong>{{ title_case($task->advertRequest->company->user->name) }}</strong></h5>
-                            <h5>Date Assigned: <strong>{{ $task->created_at->format('l, d M Y') }}</strong></h5>
+                            <h5>Date Assigned: <strong>{{ $task->created_at->format('jS F Y') }}</strong></h5>
                         </div>
                         <div class="col-sm-3">
                             <h5>Task Status: <strong>{{ $task->advertRequest->status }}</strong></h5>

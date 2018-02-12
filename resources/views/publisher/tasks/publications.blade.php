@@ -42,7 +42,7 @@
                                                 {{ $publication->description }}
                                             </a>
                                         </td>
-                                        <td>{{ $publication->created_at->format('d/m/Y') }}</td>
+                                        <td>{{ $publication->created_at->format('jS F Y') }}</td>
                                         <td>
                                             <a href="{{ route('showPublicationReports',['task'=>$task->match_id, 'id'=>$publication->id]) }}"
                                                 class="btn btn-sm btn-default btn-fill">

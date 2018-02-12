@@ -30,7 +30,7 @@
                                     <td>{{ ucfirst($task->advertRequest->title) }}</td>
                                     <td>{{ ucfirst($task->advertRequest->company->name) }}</td>
                                     <td>{{ title_case($task->advertRequest->company->user->name) }}</td>
-                                    <td>{{ $task->created_at->format('l, d M Y') }}</td>
+                                    <td>{{ $task->created_at->format('jS F Y') }}</td>
                                     <td>
                                         <a href="{{ route('showTaskDetail',['task'=>$task->match_id]) }}"
                                             class="btn btn-default btn-fill btn-sm">

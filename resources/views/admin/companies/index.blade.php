@@ -39,7 +39,7 @@
                                         <td>{{ ucfirst($company->name) }}</td>
                                         <td>{{ ucfirst($company->address) }}</td>
                                         <td>{{ title_case($company->user->name) }}</td>
-                                        <td>{{ $company->created_at->format('d/M/Y') }}</td>
+                                        <td>{{ $company->created_at->format('jS F Y') }}</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-info">Action</button>

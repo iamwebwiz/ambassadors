@@ -29,6 +29,7 @@
                             <thead>
                                 <th>Title</th>
                                 <th>URL</th>
+                                <th>Date Created</th>
                                 <th></th>
                             </thead>
                             <tbody>
@@ -40,6 +41,7 @@
                                                 {{ $publication->description }}
                                             </a>
                                         </td>
+                                        <td>{{ $publication->created_at->format('jS F Y') }}</td>
                                         <td>
                                             <a href="{{ route('getPublicationReports',['advert'=>$advert->id,'id'=>$publication->id]) }}"
                                                 class="btn btn-link">Reports</a>

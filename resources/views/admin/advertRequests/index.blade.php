@@ -28,9 +28,9 @@
                             <thead>
                                 <th>#</th>
                                 <th>Title</th>
-                                <th>Body</th>
                                 <th>Client</th>
                                 <th>Company</th>
+                                <th>Date</th>
                                 <th>Status</th>
                             </thead>
                             <tbody>
@@ -38,9 +38,9 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ ucfirst($advert->title) }}</td>
-                                        <td>{{ ucfirst($advert->body) }}</td>
                                         <td>{{ title_case($advert->user->name) }}</td>
                                         <td>{{ $advert->company->name }}</td>
+                                        <td>{{ $advert->created_at->format('jS F Y') }}</td>
                                         <td>
                                             <?php
                                                 switch ($advert->status) {

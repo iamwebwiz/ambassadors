@@ -36,7 +36,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ ucfirst($task->advertRequest->title) }}</td>
                                     <td>{{ title_case($task->user->name) }}</td>
-                                    <td>{{ $task->created_at }}</td>
+                                    <td>{{ $task->created_at->format('jS F Y') }}</td>
                                     <td>
                                         <form action="{{ route('deleteMatching', ['task'=>$task->id]) }}" method="post">
                                             {{ csrf_field() }}

@@ -27,7 +27,7 @@
                                             </a>
                                         </td>
                                         <td>{{ $publication->advertRequest->user->name }}</td>
-                                        <td>{{ $publication->created_at->format('d/m/Y') }}</td>
+                                        <td>{{ $publication->created_at->format('jS F Y') }}</td>
                                     </tr>
                                 @empty
                                     You have not published anything at this time.

@@ -42,7 +42,7 @@
                                     <td>
                                         <img src="{{ Storage::url($report->filepath) }}" alt="" width="80px" class="img-thumbnail">
                                     </td>
-                                    <td>{{ $report->created_at->format('l, d M Y') }}</td>
+                                    <td>{{ $report->created_at->format('jS F Y') }}</td>
                                     <td><a href="{{ Storage::url($report->filepath) }}" target="_blank" class="btn btn-link">View Full Image</a></td>
                                 </tr>
                             @endforeach

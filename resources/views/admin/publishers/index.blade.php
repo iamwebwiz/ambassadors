@@ -43,7 +43,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ title_case($publisher->name) }}</td>
                                     <td>{{ $publisher->email }}</td>
-                                    <td>{{ $publisher->created_at->format('d/M/Y') }}</td>
+                                    <td>{{ $publisher->created_at->format('jS F Y') }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <button type="button" class="btn btn-info">Action</button>
