@@ -17,11 +17,10 @@ class PublicationsController extends Controller
 
     public function index()
     {
-        $data = [];
         // Fetch all publications from database
         $data['publications'] = Publication::where('user_id', Auth::id())->paginate(30);
         $data['title'] = "My Publications";
 
-        return view('publisher.publications.index', $data);
+        return view('publisher.publications.index', $data)->render();
     }
 }

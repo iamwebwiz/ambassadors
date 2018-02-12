@@ -25,7 +25,7 @@ class ReportsController extends Controller
         $data['publication'] = $publication;
         $data['reports'] = $publication->reports;
 
-        return view('publisher.reports.index', $data);
+        return view('publisher.reports.index', $data)->render();
     }
 
     public function create($taskID, $publicationID)
@@ -36,7 +36,7 @@ class ReportsController extends Controller
         $data['task'] = $task;
         $data['publication'] = $publication;
 
-        return view('publisher.reports.new', $data);
+        return view('publisher.reports.new', $data)->render();
     }
 
     public function store(Request $request, $taskID, $publicationID)
@@ -59,11 +59,13 @@ class ReportsController extends Controller
         }
 
         if ($publication->reports()->save($report)) {
+            flash('Report saved successfully!')->success();
             return redirect()->route('showPublicationReports', [
                 'task' => $taskID,
                 'id' => $publicationID
             ]);
         } else {
+            flash('Failed to make the report!')->error();
             return back();
         }
     }

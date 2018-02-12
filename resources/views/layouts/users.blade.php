@@ -143,6 +143,7 @@
 
             <div class="content">
                 <div class="container-fluid">
+                    @include('flash::message')
                     @yield('body')
                 </div>
             </div>
@@ -169,6 +170,11 @@
     <script src="{{ asset('js/paper-dashboard.js') }}"></script>
 
     @yield('script')
+
+    <script>
+        $('#flash-overlay-modal').modal();
+        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    </script>
 
 </body>
 

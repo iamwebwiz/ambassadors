@@ -22,6 +22,7 @@
 
             <div class="box box-primary">
                 <div class="box-body">
+                    @include('flash::message')
                     @if (count($requests) > 0)
                         <table class="table table-striped">
                             <thead>

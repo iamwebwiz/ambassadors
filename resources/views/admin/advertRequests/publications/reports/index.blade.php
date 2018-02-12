@@ -23,6 +23,7 @@
 
             <div class="box box-primary">
                 <div class="box-body">
+                    @include('flash::message')
                     @if (count($reports) > 0)
                         <table class="table table-striped table-hover">
                             <thead>

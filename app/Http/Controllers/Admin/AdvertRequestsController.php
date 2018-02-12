@@ -8,6 +8,7 @@ use App\Matching;
 use App\Publication;
 use App\Role;
 use Illuminate\Http\Request;
+use Laracasts\Flash\flash;
 
 class AdvertRequestsController extends Controller
 {
@@ -53,6 +54,7 @@ class AdvertRequestsController extends Controller
     public function deletePublication($advertID, $publicationID)
     {
         Publication::findOrFail($publicationID)->delete();
+        flash('Publication has been deleted')->info();
         return back();
     }
 

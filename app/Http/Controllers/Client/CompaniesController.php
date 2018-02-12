@@ -20,12 +20,12 @@ class CompaniesController extends Controller
     {
         $data['user'] = auth()->user();
         $data['title'] = "My Companies";
-        return view('client/companies/index', $data);
+        return view('client.companies.index', $data)->render();
     }
 
     public function newCompany()
     {
-        return view('client/companies/new');
+        return view('client.companies.new');
     }
 
     public function addNewCompany(NewCompany $request)
@@ -36,6 +36,7 @@ class CompaniesController extends Controller
         $company->name = $request->company_name;
         $company->address = $request->company_address;
         $user->companies()->save($company);
+        flash('New company has been created!')->success();
         return redirect(route('client.companies'));
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use Laracasts\Flash\flash;
 
 class UsersController extends Controller
 {
@@ -31,6 +32,7 @@ class UsersController extends Controller
         // Attach role to user
         $role = Role::where('name', 'client')->first();
         $client->attachRole($role);
+        flash('New client added successfully!')->success();
         return back();
     }
 
@@ -50,6 +52,7 @@ class UsersController extends Controller
         // Attach role to user
         $role = Role::where('name', 'publisher')->first();
         $publisher->attachRole($role);
+        flash('New Publisher added successfully!')->success();
         return back();
     }
 
@@ -57,6 +60,7 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
+        flash('User has been deleted!')->info();
         return back();
     }
 }

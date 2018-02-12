@@ -29,7 +29,7 @@
                         Add New Publisher
                     </button>
                 </div>
-                {{-- <div class="table-responsive"> --}}
+                @include('flash::message')
                     <table class="table table-striped">
                         <thead>
                             <th>#</th>

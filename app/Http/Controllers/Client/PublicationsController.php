@@ -19,13 +19,13 @@ class PublicationsController extends Controller
     {
         $data['title'] = "My Publications";
         $data['user'] = auth()->user();
-        return view('client/publications/index', $data);
+        return view('client.publications.index', $data)->render();
     }
 
     public function showRequestPublicationForm()
     {
         $data['title'] = "New Publication Request";
-        return view('client/publications/new', $data);
+        return view('client.publications.new', $data)->render();
     }
 
     public function requestNewPublication(NewPublication $request)
@@ -37,6 +37,7 @@ class PublicationsController extends Controller
         $advert->body = $request->description;
         $advert->company_id = $request->company;
         $user->advertRequests()->save($advert);
+        flash('You have placed a request, the administrator shall hand your job to the best marketer!')->info();
         return redirect(route('client.publications'));
     }
 }

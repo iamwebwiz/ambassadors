@@ -26,7 +26,7 @@ class TasksController extends Controller
         // $this->data['tasks'] = Matching::where('user_id', Auth::id())->paginate(20);
         $this->data['tasks'] = $user->matchings()->paginate(20);
 
-        return view('publisher.tasks.index', $this->data);
+        return view('publisher.tasks.index', $this->data)->render();
     }
 
     public function showTaskDetail($taskID) {
@@ -36,7 +36,7 @@ class TasksController extends Controller
         $this->data['task'] = $task;
         $this->data['advert_title'] = $advert_title;
 
-        return view('publisher.tasks.details', $this->data);
+        return view('publisher.tasks.details', $this->data)->render();
     }
 
     public function changeTaskStatus(Request $request, $taskID) {
@@ -44,6 +44,7 @@ class TasksController extends Controller
         $advert = $task->advertRequest;
         $advert->status = $request->task_status;
         $advert->save();
+        flash('Task status changed')->success();
         return back();
     }
 
@@ -58,7 +59,7 @@ class TasksController extends Controller
             'publications' => $publications
         ];
 
-        return view('publisher.tasks.publications', $this->data);
+        return view('publisher.tasks.publications', $this->data)->render();
     }
 
     public function makeNewPublication($taskID)
@@ -71,7 +72,7 @@ class TasksController extends Controller
             'advert' => $advert
         ];
 
-        return view('publisher.publications.new', $this->data);
+        return view('publisher.publications.new', $this->data)->render();
     }
 
     public function addNewPublication(NewPublication $request, $taskID)
@@ -89,6 +90,7 @@ class TasksController extends Controller
         $publication->advert_request_id = $advert->id;
 
         if ($user->publications()->save($publication)) {
+            flash('New Publication made')->success();
             return redirect()->route('showTaskPublications', ['task' => $taskID]);
         }
 

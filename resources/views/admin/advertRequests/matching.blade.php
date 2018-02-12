@@ -22,6 +22,7 @@
 
             <div class="box box-primary">
                 <div class="box-body">
+                    @include('flash::message')
                     <table class="table table-striped table-bordered">
                         <thead>
                             <th>#</th>

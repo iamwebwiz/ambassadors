@@ -179,6 +179,7 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
         Biggo6\Cpanel\Biggo6CpanelServiceProvider::class,
         Chumper\Zipper\ZipperServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
     ],
 
@@ -229,7 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-        'Zipper' => 'Chumper\Zipper\Zipper'
+        'Zipper' => 'Chumper\Zipper\Zipper',
 
     ],
 

@@ -22,6 +22,7 @@
 
             <div class="box box-primary">
                 <div class="box-body">
+                    @include('flash::message')
                     @if (count($companies) > 0)
                         <table class="table table-striped">
                             <thead>
@@ -48,7 +49,7 @@
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a href="#">Edit</a></li>
-                                                    <li><a href="#" id="deleteClient">Delete</a></li>
+                                                    <li><a href="#">Delete</a></li>
                                                 </ul>
                                             </div>
                                         </td>

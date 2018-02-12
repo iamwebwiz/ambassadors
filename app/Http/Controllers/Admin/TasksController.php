@@ -6,6 +6,7 @@ use App\AdvertRequest;
 use App\Http\Controllers\Controller;
 use App\Matching;
 use Illuminate\Http\Request;
+use Laracasts\Flash\flash;
 
 class TasksController extends Controller
 {
@@ -35,9 +36,11 @@ class TasksController extends Controller
         if ($matching->save()) {
             $advert->status = "Matched";
             $advert->save();
+            flash('Matching done successfully!')->success();
 
             return redirect()->route('admin.showAllTasks');
         } else {
+            flash('Unable to match at this moment, try again!')->warning();
             return back();
         }
     }
@@ -50,7 +53,7 @@ class TasksController extends Controller
         $advert->status = "Pending";
         $advert->save();
         $match->delete();
-
+        flash('Matching deleted!')->success();
         return back();
     }
 }
