@@ -22,8 +22,8 @@
   <link rel="stylesheet" href="{{asset('userdash/css/site.min3f0d.css?v2.2.0')}}">
 
   <!-- Skin tools (demo site only) -->
-  {{-- <link rel="stylesheet" href="{{asset('userdash/global/css/skintools.min3f0d.css?v2.2.0')}}">
-  <script src="{{asset('userdash/js/sections/skintools.min.js')}}"></script> --}}
+  {{-- <link rel="stylesheet" href="{{asset('userdash/global/css/skintools.min3f0d.css?v2.2.0')}}"> --}}
+  {{-- <script src="{{asset('userdash/js/sections/skintools.min.js')}}"></script> --}}
 
   <!-- Plugins -->
   <link rel="stylesheet" href="{{asset('userdash/global/vendor/animsition/animsition.min3f0d.css?v2.2.0')}}">

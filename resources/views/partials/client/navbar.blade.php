@@ -65,7 +65,7 @@
               </li>
               <li class="divider" role="presentation"></li>
               <li role="presentation">
-                <a href="javascript:void(0)" role="menuitem"><i class="icon md-power" aria-hidden="true"></i> Logout</a>
+                <a href="{{ url('logout') }}" role="menuitem"><i class="icon md-power" aria-hidden="true"></i> Logout</a>
               </li>
             </ul>
           </li>
