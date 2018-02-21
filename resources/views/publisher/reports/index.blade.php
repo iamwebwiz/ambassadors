@@ -23,7 +23,7 @@
                                     class="btn btn-default btn-fill">
                                     New Report
                                 </a> --}}
-                                <button class="btn btn-dark btn-fill pull-right waves-effect waves-light" data-target="#exampleNifty3dSlit"
+                                <button class="btn btn-dark btn-fill waves-effect waves-light" data-target="#exampleNifty3dSlit"
                                 data-toggle="modal" type="button">
                                     New Report
                                 </button>

@@ -4,10 +4,10 @@
         <div>
           <ul class="site-menu">
 
-            <li class="site-menu-category"></li>
+            <li class="site-menu-category">Navigation</li>
 
             <li class="site-menu-item" id="dashboard">
-              <a class="animsition-link" href="{{ route('client.dash') }}">
+              <a class="animsition-link" href="{{ route('publisher.dash') }}">
                 <i class="site-menu-icon fa fa-dashboard" aria-hidden="true"></i>
                 <span class="site-menu-title">Dashboard</span>
               </a>

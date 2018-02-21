@@ -32,7 +32,8 @@
                                         <td>{{ $publication->advertRequest->user->name }}</td>
                                         <td>{{ $publication->created_at->format('jS F Y') }}</td>
                                         <td>
-                                            <a href="{{ route('publisher.deletePublication', ['id'=>$publication->id]) }}" class="btn btn-danger delete" type="button">
+                                            <a href="{{ route('publisher.deletePublication', ['id'=>$publication->id]) }}"
+                                                class="btn btn-danger delete" type="button">
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                         </td>

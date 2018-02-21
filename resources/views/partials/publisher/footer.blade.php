@@ -52,7 +52,6 @@
   <script src="{{asset('userdash/global/js/components/jvectormap.min.js')}}"></script>
   <script src="{{asset('userdash/global/js/components/peity.min.js')}}"></script>
 
-
   <script src="{{asset('userdash/examples/js/dashboard/v1.min.js')}}"></script>
 
 

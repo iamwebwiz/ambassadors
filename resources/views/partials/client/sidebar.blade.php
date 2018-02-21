@@ -4,7 +4,7 @@
         <div>
           <ul class="site-menu">
 
-            <li class="site-menu-category"></li>
+            <li class="site-menu-category">Navigation</li>
 
             <li class="site-menu-item" id="dashboard">
               <a class="animsition-link" href="{{ route('client.dash') }}">
