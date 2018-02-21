@@ -53,9 +53,14 @@ class AdvertRequestsController extends Controller
 
     public function deletePublication($advertID, $publicationID)
     {
-        Publication::findOrFail($publicationID)->delete();
-        flash('Publication has been deleted')->info();
-        return back();
+        $publication = Publication::findOrFail($publicationID);
+        if ($publication->delete()) {
+            foreach ($publication->reports as $report) {
+                $report->delete();
+            }
+            flash('Publication has been deleted')->info();
+            return back();
+        }
     }
 
     public function getPublicationReports($advertID, $id)

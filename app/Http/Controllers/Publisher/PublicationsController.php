@@ -26,8 +26,14 @@ class PublicationsController extends Controller
 
     public function delete($id)
     {
-        Publication::findOrFail($id)->delete();
-        flash('Publication deleted!')->info();
-        return back();
+        $publication = Publication::findOrFail($id);
+        $reports = $publication->reports;
+        if ($publication->delete()) {
+            foreach ($reports as $report) {
+                $report->delete();
+            }
+            flash('Publication deleted!')->info();
+            return back();
+        }
     }
 }
