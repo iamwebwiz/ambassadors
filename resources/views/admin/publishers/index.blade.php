@@ -110,7 +110,7 @@
 
 @stop
 
-@section('script')
+@section('scripts')
     <script>
         $('#users, #publishers').addClass('active');
 

@@ -27,6 +27,7 @@
                     @if (count($reports) > 0)
                         <table class="table table-striped table-hover">
                             <thead>
+                                <th>ID #</th>
                                 <th>Screenshot</th>
                                 <th>Date Added</th>
                                 <th></th>
@@ -34,6 +35,7 @@
                             <tbody>
                                 @foreach ($reports as $report)
                                     <tr>
+                                        <td>{{ $loop->iteration }}</td>
                                         <td>
                                             <img src="{{ Storage::url($report->filepath) }}" class="img-thumbnail"
                                             alt="" width="80px">
@@ -43,6 +45,12 @@
                                             <a href="{{ Storage::url($report->filepath) }}" target="_blank"
                                                 class="btn btn-primary">
                                                 View Full Image
+                                            </a>
+                                            <a href="{{ route('deletePublicationReport', [
+                                                'advert' => $advert->id,
+                                                'id' => $publication->id,
+                                                'report' => $report->id]) }}" class="btn btn-danger delete">
+                                                <i class="fa fa-trash"></i>
                                             </a>
                                         </td>
                                     </tr>
@@ -62,8 +70,16 @@
     <!-- /.content-wrapper -->
 @endsection
 
-@section('script')
+@section('scripts')
     <script>
         $('#advertRequest').addClass('active');
+        $('a.delete').click(function() {
+            var res = confirm('Confirm delete of report?');
+            if (res === true) {
+                return true;
+            } else {
+                return false;
+            }
+        });
     </script>
 @endsection

@@ -21,7 +21,7 @@
     <!-- AdminLTE App -->
     <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
 
-    @yield('script')
+    @yield('scripts')
 
     <script>
         $('#flash-overlay-modal').modal();

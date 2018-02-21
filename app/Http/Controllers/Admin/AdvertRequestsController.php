@@ -6,6 +6,7 @@ use App\AdvertRequest;
 use App\Http\Controllers\Controller;
 use App\Matching;
 use App\Publication;
+use App\Report;
 use App\Role;
 use Illuminate\Http\Request;
 use Laracasts\Flash\flash;
@@ -75,5 +76,12 @@ class AdvertRequestsController extends Controller
         $data['reports'] = $reports;
 
         return view('admin.advertRequests.publications.reports.index', $data)->render();
+    }
+
+    public function deletePublicationReport($advertId, $pubID, $id)
+    {
+        Report::findOrFail($id)->delete();
+        flash('Report deleted successfully!')->info();
+        return back();
     }
 }

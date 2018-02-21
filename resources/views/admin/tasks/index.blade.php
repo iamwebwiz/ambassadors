@@ -62,7 +62,7 @@
 
 @stop
 
-@section('script')
+@section('scripts')
     <script>
         $("#tasks").addClass("active");
 

@@ -28,7 +28,7 @@
 
 @stop
 
-@section('script')
+@section('scripts')
     <script>
         $('#dashboard').addClass('active');
     </script>

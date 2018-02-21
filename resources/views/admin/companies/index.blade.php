@@ -72,7 +72,7 @@
 
 @stop
 
-@section('script')
+@section('scripts')
     <script>
         $('#companies').addClass('active');
     </script>

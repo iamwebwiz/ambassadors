@@ -70,7 +70,7 @@
 
 @stop
 
-@section('script')
+@section('scripts')
     <script>
         $('#advertRequest').addClass('active');
 
