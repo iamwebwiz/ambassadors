@@ -23,6 +23,7 @@
                             <th>Company</th>
                             <th>Client</th>
                             <th>Date Assigned</th>
+                            <th>Status</th>
                             <th></th>
                         </thead>
                         <tbody>
@@ -33,6 +34,26 @@
                                     <td>{{ ucfirst($task->advertRequest->company->name) }}</td>
                                     <td>{{ title_case($task->advertRequest->company->user->name) }}</td>
                                     <td>{{ $task->created_at->format('jS F Y') }}</td>
+                                    <td>
+                                        <?php
+                                            switch ($task->advertRequest->status) {
+                                                case 'Pending':
+                                                    echo "<div class='label label-default'>Pending</div>";
+                                                    break;
+                                                case 'Matched':
+                                                    echo "<div class='label label-warning'>Matched</div>";
+                                                    break;
+                                                case 'Processing':
+                                                    echo "<div class='label label-info'>Processing</div>";
+                                                    break;
+                                                case 'Finished':
+                                                    echo "<div class='label label-success'>Finished</div>";
+                                                    break;
+                                                default:
+                                                    echo "";
+                                            }
+                                        ?>
+                                    </td>
                                     <td>
                                         <a href="{{ route('showTaskDetail',['task'=>$task->match_id]) }}"
                                             class="btn btn-dark btn-fill">

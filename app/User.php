@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Matching::class);
     }
+
+    public function getTasks($limit = 5)
+    {
+        return Matching::where('user_id', $this->id)->latest()->take($limit)->get();
+    }
 }
