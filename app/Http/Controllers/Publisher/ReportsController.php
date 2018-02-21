@@ -69,4 +69,11 @@ class ReportsController extends Controller
             return back();
         }
     }
+
+    public function delete($id)
+    {
+        Report::findOrFail($id)->delete();
+        flash('Report has been deleted!')->info();
+        return back();
+    }
 }

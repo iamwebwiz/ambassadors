@@ -70,6 +70,7 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
         Route::get('{task}/detail/publications/{id}/reports', 'ReportsController@index')->name('showPublicationReports');
         Route::get('{task}/detail/publications/{id}/reports/new', 'ReportsController@create')->name('newReportForm');
         Route::post('{task}/detail/publications/{id}/reports/new', 'ReportsController@store')->name('addNewReport');
+        Route::get('reports/{id}/delete', 'ReportsController@delete')->name('publisher.deleteReport');
 
         // New Publication for task
         Route::get('{task}/detail/publications/new', 'TasksController@makeNewPublication')
