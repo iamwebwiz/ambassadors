@@ -49,8 +49,15 @@ class User extends Authenticatable
         return $this->hasMany(Matching::class);
     }
 
-    public function getTasks($limit = 5)
+    public function getTasks($limit = 3)
     {
         return Matching::where('user_id', $this->id)->latest()->take($limit)->get();
+    }
+
+    public function getCompletedTasks($limit = 3)
+    {
+        foreach ($this->getTasks($limit) as $task) {
+            return $task->advertRequest->where('status', 'Finished')->latest()->take($limit)->get();
+        }
     }
 }
