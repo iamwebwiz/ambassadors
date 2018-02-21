@@ -15,12 +15,14 @@ class TasksController extends Controller
 {
     protected $data = [];
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
         $this->middleware('role:publisher');
     }
 
-    public function index() {
+    public function index()
+    {
         $user = Auth::user();
         $this->data['title'] = "My Tasks";
         // $this->data['tasks'] = Matching::where('user_id', Auth::id())->paginate(20);
@@ -29,7 +31,8 @@ class TasksController extends Controller
         return view('publisher.tasks.index', $this->data)->render();
     }
 
-    public function showTaskDetail($taskID) {
+    public function showTaskDetail($taskID)
+    {
         $task = Matching::where('match_id', $taskID)->first();
         $advert_title = $task->advertRequest->title;
         $this->data['title'] = "Details for ".ucfirst($advert_title);
@@ -39,7 +42,8 @@ class TasksController extends Controller
         return view('publisher.tasks.details', $this->data)->render();
     }
 
-    public function changeTaskStatus(Request $request, $taskID) {
+    public function changeTaskStatus(Request $request, $taskID)
+    {
         $task = Matching::where('match_id', $taskID)->first();
         $advert = $task->advertRequest;
         $advert->status = $request->task_status;
@@ -48,7 +52,8 @@ class TasksController extends Controller
         return back();
     }
 
-    public function showTaskPublications($taskID) {
+    public function showTaskPublications($taskID)
+    {
         $task = Matching::where('match_id', $taskID)->first();
         $advert = $task->advertRequest;
         $publications = $advert->publications;
@@ -56,7 +61,8 @@ class TasksController extends Controller
         $this->data = [
             'task' => $task,
             'advert' => $advert,
-            'publications' => $publications
+            'publications' => $publications,
+            'title' => "{$advert->title} (Publications)"
         ];
 
         return view('publisher.tasks.publications', $this->data)->render();
@@ -69,7 +75,8 @@ class TasksController extends Controller
 
         $this->data = [
             'task' => $task,
-            'advert' => $advert
+            'advert' => $advert,
+            'title' => "Make New Publication"
         ];
 
         return view('publisher.publications.new', $this->data)->render();

@@ -1,17 +1,20 @@
-@extends('layouts.users')
+@extends('layouts.client')
 
 @section('body')
 
     <div class="row">
         <div class="col-sm-12">
-            <h1>My Companies</h1>
-            <div class="card">
-                <div class="content">
+            <div class="panel panel-bordered panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ $title }}</h3>
+                </div>
+                <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-12">
-                            <a href="{{ route('newCompany') }}" class="pull-right btn btn-primary">
+                            {{-- <a href="{{ route('newCompany') }}" class="pull-right btn btn-primary">
                                 New Company
-                            </a>
+                            </a> --}}
+                            <button class="btn btn-primary pull-right waves-effect waves-light" data-target="#exampleNifty3dSlit" data-toggle="modal" type="button">New Company</button>
                         </div>
                     </div>
                     <br><br>
@@ -46,9 +49,47 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade modal-3d-slit" id="exampleNifty3dSlit" aria-hidden="true"
+    aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title">Add A New Company</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form action="{{ route('addNewCompany') }}" method="post">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" name="company_name" placeholder="Company Name" class="form-control"
+                            value="{{ old('company_name') }}">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="address" name="company_address" placeholder="Company Address" class="form-control"
+                            value="{{ old('company_address') }}">
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-pure margin-0" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create Company</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
 @endsection
 
-@section('script')
+@section('scripts')
 <script>
     $('#companies').addClass('active');
 </script>

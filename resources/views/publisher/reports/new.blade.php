@@ -1,4 +1,4 @@
-@extends('layouts.users')
+@extends('layouts.publisher')
 
 @section('body')
 
@@ -29,7 +29,7 @@
 
 @endsection
 
-@section('script')
+@section('scripts')
     <script>
         $('#tasks').addClass('active');
     </script>

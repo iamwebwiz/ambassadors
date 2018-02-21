@@ -82,7 +82,7 @@
           <h3 class="brand-text font-size-40">DGAmbassadors</h3>
         </div>
         <h3 class="font-size-24">Sign In</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Sign In to gain access to DGAmbassadors</p>
 
         <form method="post" action="{{ route('login') }}">
           {{ csrf_field() }}

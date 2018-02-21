@@ -1,4 +1,4 @@
-@extends('layouts.users')
+@extends('layouts.publisher')
 
 @section('body')
 
@@ -11,21 +11,23 @@
 
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-primary">My Tasks</h1>
-            <div class="panel panel-default">
+            <div class="panel panel-bordered panel-dark">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ $title }}</h3>
+                </div>
                 <div class="panel-body">
-                    <table class="table table-striped table-bordered">
-                        <thead id="tableHeading">
-                            <th class="text-center">#</th>
-                            <th class="text-center">Title</th>
-                            <th class="text-center">Company</th>
-                            <th class="text-center">Client</th>
-                            <th class="text-center">Date Assigned</th>
+                    <table class="table table-striped">
+                        <thead>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Company</th>
+                            <th>Client</th>
+                            <th>Date Assigned</th>
                             <th></th>
                         </thead>
                         <tbody>
                             @forelse ($tasks as $task)
-                                <tr class="text-center">
+                                <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ ucfirst($task->advertRequest->title) }}</td>
                                     <td>{{ ucfirst($task->advertRequest->company->name) }}</td>
@@ -33,7 +35,7 @@
                                     <td>{{ $task->created_at->format('jS F Y') }}</td>
                                     <td>
                                         <a href="{{ route('showTaskDetail',['task'=>$task->match_id]) }}"
-                                            class="btn btn-default btn-fill btn-sm">
+                                            class="btn btn-dark btn-fill">
                                             View Details
                                         </a>
                                     </td>
@@ -51,7 +53,7 @@
 
 @endsection
 
-@section('script')
+@section('scripts')
 <script>
     $('#tasks').addClass('active');
 </script>

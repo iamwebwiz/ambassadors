@@ -47,7 +47,8 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
 
     // Publications
     Route::group(['prefix' => 'publications'], function() {
-        Route::get('/', 'PublicationsController@index')->name('publications');
+        Route::get('/', 'PublicationsController@index')->name('publisher.publications');
+        Route::get('{id}/delete', 'PublicationsController@delete')->name('publisher.deletePublication');
     });
 
     // Tasks

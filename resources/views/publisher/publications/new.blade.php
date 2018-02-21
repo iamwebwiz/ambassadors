@@ -5,15 +5,16 @@
     <style>
         input[type="text"],
         textarea[name="description"] {
-            border: 1px solid gray;
+            /*border: 1px solid gray;*/
         }
     </style>
 
     <div class="row">
         <div class="col-md-12">
-            <h1>New Publication</h1>
-
-            <div class="panel panel-default">
+            <div class="panel panel-dark panel-bordered">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ $title }}</h3>
+                </div>
                 <div class="panel-body">
                     <form action="{{ route('addNewPublication',['task'=>$task->match_id]) }}" method="post">
                         {{ csrf_field() }}
@@ -50,7 +51,7 @@
 
 @endsection
 
-@section('script')
+@section('scripts')
 <script>
     $('#publications').addClass('active');
 </script>

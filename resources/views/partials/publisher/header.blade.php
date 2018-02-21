@@ -9,7 +9,7 @@
   <meta name="description" content="bootstrap material admin template">
   <meta name="author" content="">
 
-  <title>{{ isset($title) ? $title." | Client Dashboard | DGAmbassadors" : "Client Dashboard | DGAmbassadors" }}</title>
+  <title>{{ isset($title) ? $title." | Publisher Dashboard | DGAmbassadors" : "Publisher Dashboard | DGAmbassadors" }}</title>
 
   <link rel="apple-touch-icon" href="{{asset('userdash/images/apple-touch-icon.png')}}">
   <link rel="shortcut icon" href="{{asset('userdash/images/favicon.ico')}}">

@@ -23,4 +23,11 @@ class PublicationsController extends Controller
 
         return view('publisher.publications.index', $data)->render();
     }
+
+    public function delete($id)
+    {
+        Publication::findOrFail($id)->delete();
+        flash('Publication deleted!')->info();
+        return back();
+    }
 }

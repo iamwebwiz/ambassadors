@@ -1,4 +1,4 @@
-@extends('layouts.users')
+@extends('layouts.publisher')
 
 @section('body')
 
@@ -11,8 +11,10 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2 class="text-primary">Reports</h2>
-        <div class="panel panel-default">
+        <div class="panel panel-dark panel-bordered">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ $title }}</h3>
+            </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-12">
@@ -29,7 +31,7 @@
                     <h3 class="text-info text-center">No report for this publication yet.</h3>
                 @else
                     <table class="table table-hover">
-                        <thead id="tableHeading">
+                        <thead>
                             <th>ID</th>
                             <th>Screenshot</th>
                             <th>Date Added</th>
