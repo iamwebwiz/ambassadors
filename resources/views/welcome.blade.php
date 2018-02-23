@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Welcome to DGAmbassadors &bull; Digital Ambassadors &bull; Soft Work</title>
 
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -20,6 +20,6 @@
         </div>
     </nav>
 
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
