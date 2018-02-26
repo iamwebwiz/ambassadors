@@ -78,6 +78,9 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
         Route::post('{task}/detail/publications/new', 'TasksController@addNewPublication')
             ->name('addNewPublication');
     });
+
+    // Referrals
+    Route::get('referrals', 'ReferralController@index')->name('publisher.referrals');
 });
 
 // Routes for Admin
