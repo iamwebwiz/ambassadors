@@ -49,6 +49,16 @@
             </div>
         </div>
 
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>Your Referral link:</h4>
+                    <input type="text" class="form-control" value="{{ url('register?ref='.$user->name) }}">
+                    <h5>Share this link with potential publishers and get paid after 10 referrals</h5>
+                </div>
+            </div>
+        </div>
+
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="panel panel-bordered panel-info">
                 <div class="panel-heading">

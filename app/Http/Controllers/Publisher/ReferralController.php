@@ -17,7 +17,7 @@ class ReferralController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $referrals = $user->referrals;
+        $referrals = $user->referrals()->paginate(30);
 
         $data = ['user' => $user, 'referrals' => $referrals, 'title' => 'My Referrals'];
         return view('publisher.referrals.index', $data);

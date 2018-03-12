@@ -15,8 +15,8 @@
                             <label class="col-md-4 control-label">Account type</label>
                             <div class="col-md-6">
                                 <select name="account_type" class="form-control">
-                                    <option value="client">Business Owner</option>
-                                    <option value="publisher">Publisher</option>
+                                    <option value="client" {{ isset($_GET['ref']) ? "disabled" : "" }}>Business Owner</option>
+                                    <option value="publisher" {{ isset($_GET['ref']) ? "selected" : "" }}>Publisher</option>
                                 </select>
                             </div>
                         </div>
@@ -68,6 +68,13 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Referrer</label>
+                            <div class="col-md-6">
+                                <input type="text" name="referrer" value="{{ $_GET['ref'] }}" class="form-control" readonly>
                             </div>
                         </div>
 

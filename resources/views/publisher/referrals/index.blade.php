@@ -11,10 +11,10 @@
             <div class="panel-body">
                 @if (count($referrals) > 0)
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-striped">
                             <thead>
                                 <th>ID</th>
-                                <th>Name</th>
+                                <th>Username</th>
                                 <th>Registration Date</th>
                             </thead>
                             <tbody>
@@ -28,10 +28,11 @@
                             </tbody>
                         </table>
                     </div>
+                    {{ $referrals->links() }}
                 @else
-                    <h3 class="text-info text-center">
+                    <h4 class="text-info text-center">
                         You have not referred any publisher. Share your referral link to get referrals.
-                    </h3>
+                    </h4>
                 @endif
             </div>
         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Referral;
 use App\Role;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -68,6 +69,18 @@ class RegisterController extends Controller
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->password = bcrypt($data['password']);
+
+        if (!is_null($data['referrer'])) {
+            $referral = new Referral;
+            $referrer = User::where('name', $data['referrer'])->firstOrFail();
+            $referral->username = $data['name'];
+            try {
+                $referrer->referrals()->save($referral);
+            } catch (\Exception $e) {
+                return null;
+            }
+        }
+
         $user->save();
 
         if ($data['account_type'] == "client") {
