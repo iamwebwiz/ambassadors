@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\TenReferralsNotification;
+use App\Referral;
 use App\Role;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -52,7 +55,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:3|confirmed',
         ]);
     }
 
@@ -68,6 +71,23 @@ class RegisterController extends Controller
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->password = bcrypt($data['password']);
+
+        if (!is_null($data['referrer'])) {
+            $referral = new Referral;
+            $referrer = User::where('name', $data['referrer'])->firstOrFail();
+            $referral->username = $data['name'];
+            try {
+                $referrer->referrals()->save($referral);
+                if (count($referrer->referrals) == config('sitedata.num_of_referrals')) {
+                    Mail::send(new TenReferralsNotification($referrer));
+                } else {
+                    //
+                }
+            } catch (\Exception $e) {
+                return null;
+            }
+        }
+
         $user->save();
 
         if ($data['account_type'] == "client") {

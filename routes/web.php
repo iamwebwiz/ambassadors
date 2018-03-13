@@ -15,6 +15,8 @@ Route::get('/', 'FrontendController@welcome')->name('welcome');
 
 Auth::routes();
 
+Route::get('register?ref={ref}', 'Auth\RegisterController@showRegistrationForm');
+
 Route::get('logout', 'HomeController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -78,6 +80,9 @@ Route::group(['prefix' => 'publisher', 'middleware' => ['auth', 'role:publisher'
         Route::post('{task}/detail/publications/new', 'TasksController@addNewPublication')
             ->name('addNewPublication');
     });
+
+    // Referrals
+    Route::get('referrals', 'ReferralController@index')->name('publisher.referrals');
 });
 
 // Routes for Admin
@@ -107,9 +112,10 @@ Route::group(['prefix' => 'administrator', 'middleware' => ['auth', 'role:admin'
         Route::get('clients/{id}/delete', 'UsersController@delete')->name('deleteClient');
 
         // Publishers
-        Route::get('publishers', 'HomeController@showAllPublishers');
+        Route::get('publishers', 'HomeController@showAllPublishers')->name('showAllPublishers');
         Route::post('publishers', 'UsersController@addNewPublisher')->name('addNewPublisher');
         Route::get('publishers/{id}/delete', 'UsersController@delete')->name('deletePublisher');
+        Route::get('publishers/{id}/referrals', 'ReferralsController@showUserReferrals')->name('showUserReferrals');
     });
 
     Route::get('companies', 'CompaniesController@index');

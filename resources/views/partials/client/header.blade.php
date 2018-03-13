@@ -63,6 +63,9 @@
   <script>
     Breakpoints();
   </script>
+
+    <!-- TinyMCE -->
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 </head>
 <body class="dashboard">
   <!--[if lt IE 8]>

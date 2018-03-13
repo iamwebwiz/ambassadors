@@ -29,12 +29,14 @@
                         Add New Publisher
                     </button>
                 </div>
-                @include('flash::message')
+                <div class="box-body">
+                    @include('flash::message')
                     <table class="table table-striped">
                         <thead>
                             <th>#</th>
                             <th>Full Name</th>
                             <th>Email</th>
+                            <th>Referrals</th>
                             <th>Joined</th>
                         </thead>
                         <tbody>
@@ -43,6 +45,15 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ title_case($publisher->name) }}</td>
                                     <td>{{ $publisher->email }}</td>
+                                    <td>
+                                        @if (count($publisher->referrals) > 0)
+                                        <a href="{{ route('showUserReferrals', ['id' => $publisher->id]) }}">
+                                            {{ count($publisher->referrals) }}
+                                        </a>
+                                        @else
+                                        {{ count($publisher->referrals) }}
+                                        @endif
+                                    </td>
                                     <td>{{ $publisher->created_at->format('jS F Y') }}</td>
                                     <td>
                                         <div class="btn-group">
@@ -63,8 +74,8 @@
                             @endforelse
                         </tbody>
                     </table>
-                {{-- </div> --}}
-                {{ $publishers->links() }}
+                    {{ $publishers->links() }}
+                </div>
             </div>
 
         </section>

@@ -27,6 +27,13 @@
               </a>
             </li>
 
+            <li class="site-menu-item" id="referrals">
+              <a class="animsition-link" href="{{ route('publisher.referrals') }}">
+                <i class="site-menu-icon fa fa-users" aria-hidden="true"></i>
+                <span class="site-menu-title">Referrals</span>
+              </a>
+            </li>
+
           </ul>
         </div>
       </div>

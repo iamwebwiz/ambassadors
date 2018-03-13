@@ -60,4 +60,9 @@ class User extends Authenticatable
             return $task->advertRequest->where('status', 'Finished')->latest()->take($limit)->get();
         }
     }
+
+    public function referrals()
+    {
+        return $this->hasMany(Referral::class);
+    }
 }
