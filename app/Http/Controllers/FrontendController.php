@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-    public function welcome()
-    {
+    public function welcome() {
         createRoles();
-        return view('welcome');
+        $data['title'] = "Welcome";
+        return view('welcome', $data);
+    }
+
+    public function contact() {
+        $data['title'] = "Contact Us";
+        return view('contact', $data);
     }
 }
