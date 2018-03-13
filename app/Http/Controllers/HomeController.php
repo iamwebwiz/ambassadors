@@ -30,6 +30,6 @@ class HomeController extends Controller
     public function logout() {
         Auth::logout();
         flash('You are logged out!')->info();
-        return redirect()->to('/login');
+        return redirect(route('welcome'));
     }
 }
