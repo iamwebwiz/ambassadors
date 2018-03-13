@@ -1,5 +1,6 @@
-@include('partials.header')
+@extends('layouts.guest')
 
+@section('content')
 
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
@@ -400,4 +401,14 @@
     </div>
     <!-- // end .section -->
 
-@include('partials.footer')
+@endsection
+
+@section('scripts')
+
+<script>
+    $(function(){
+        $('a#homepage').addClass('active');
+    });
+</script>
+
+@endsection

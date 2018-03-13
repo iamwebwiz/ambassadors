@@ -1,4 +1,4 @@
-    <div class="section bg-gradient">
+    <!-- <div class="section bg-gradient">
         <div class="container">
             <div class="call-to-action">
 
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
     <!-- // end .section -->
 
     <div class="light-bg py-5" id="contact">
@@ -24,7 +24,7 @@
                     <p class="mb-2"> <span class="ti-location-pin mr-2"></span> 1485 Pacific St, Brooklyn, NY 11216 USA</p>
                     <div class=" d-block d-sm-inline-block">
                         <p class="mb-2">
-                            <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:support@mobileapp.com">support@mobileapp.com</a>
+                            <span class="ti-email mr-2"></span> <a class="mr-4" href="mailto:hello@dgambassadors.com">hello@dgambassadors.com</a>
                         </p>
                     </div>
                     <div class="d-block d-sm-inline-block">
@@ -48,8 +48,8 @@
     </div>
     <!-- // end .section -->
     <footer class="my-5 text-center">
-        <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="//colorlib.com">COLORLIB</a></small></p>
+        <!-- Copyright -->
+        <p class="mb-2"><small>COPYRIGHT &copy; 2018. ALL RIGHTS RESERVED. DEVELOPED BY <a href="//twitter.com/iamwebwiz">EZEKIEL OLADEJO</a></small></p>
 
         <small>
             <a href="#" class="m-2">PRESS</a>
@@ -65,6 +65,8 @@
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <!-- Custom JS -->
     <script src="{{ asset('js/script.js') }}"></script>
+
+    @yield('scripts')
 
 </body>
 
