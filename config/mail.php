@@ -60,6 +60,11 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Digital Ambassadors'),
     ],
 
+    'to' => [
+        'address' => env('MAIL_TO_ADDRESS', 'hello@dgambassadors.com'),
+        'name' => env('MAIL_TO_NAME', 'Digital Ambassadors'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

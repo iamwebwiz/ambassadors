@@ -3,8 +3,10 @@
 
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
-            <h1>Mobile App Landing Page Template</h1>
-            <p class="tagline">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go. </p>
+            <h1>Digital Ambassadors</h1>
+            <p class="tagline">
+                Best Platform to Hire Digital Marketers for your business.
+            </p>
         </div>
         <div class="img-holder mt-3"><img src="{{ asset('images/iphonex.png') }}" alt="phone" class="img-fluid"></div>
     </header>

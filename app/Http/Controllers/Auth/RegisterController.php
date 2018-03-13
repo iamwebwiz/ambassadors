@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\TenReferralsNotification;
 use App\Referral;
 use App\Role;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -76,6 +78,11 @@ class RegisterController extends Controller
             $referral->username = $data['name'];
             try {
                 $referrer->referrals()->save($referral);
+                if (count($referrer->referrals) == config('sitedata.num_of_referrals')) {
+                    Mail::send(new TenReferralsNotification($referrer));
+                } else {
+                    //
+                }
             } catch (\Exception $e) {
                 return null;
             }
