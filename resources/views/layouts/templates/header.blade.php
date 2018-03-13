@@ -32,6 +32,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Google Font -->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- TinyMCE -->
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 </head>
 <!--
 BODY TAG OPTIONS:
