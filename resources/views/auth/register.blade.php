@@ -74,7 +74,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">Referrer</label>
                             <div class="col-md-6">
-                                <input type="text" name="referrer" value="{{ $_GET['ref'] }}" class="form-control" readonly>
+                                <input type="text" name="referrer" value="{{ isset($_GET['ref']) ? $_GET['ref'] : '' }}" class="form-control" readonly>
                             </div>
                         </div>
 
